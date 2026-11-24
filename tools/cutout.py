@@ -19,10 +19,12 @@ ap.add_argument("--split", action="store_true")
 ap.add_argument("--min-area", type=int, default=3000)
 ap.add_argument("--max", type=int, default=1600)
 ap.add_argument("--tol", type=float, default=22)
+ap.add_argument("--bg", default="ffffff", help="background key colour, e.g. 2b2b2b for a charcoal backdrop")
 a = ap.parse_args()
+KEY = np.array([int(a.bg[i:i + 2], 16) for i in (0, 2, 4)], np.float32)
 
 rgb = np.asarray(Image.open(a.src).convert("RGB")).astype(np.float32)
-dist = (255 - rgb).max(axis=2)            # 0 = pure white
+dist = np.abs(rgb - KEY).max(axis=2)      # 0 = exactly the background colour
 whiteish = dist < a.tol
 lab, n = ndi.label(whiteish)
 border = np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]]))
@@ -33,6 +35,9 @@ means = ndi.mean(dist, lab, index=np.arange(1, n + 1))
 pocket = np.zeros(n + 1, bool)
 pocket[1:] = (sizes > dist.size * 0.00015) & (means < 7)
 bg |= pocket[lab]
+# with a dark key colour (never present in the art) every near-key pixel is background, even enclosed gaps
+if KEY.max() < 128:
+    bg |= ndi.binary_opening(dist < a.tol * .55, iterations=1)
 
 # soft edge: ramp alpha by "how non-white" within a thin band next to background
 band = ndi.binary_dilation(bg, iterations=2) & ~bg
@@ -40,9 +45,9 @@ ramp = np.clip((dist - 4) / (a.tol * 1.6), 0, 1)
 alpha = np.where(bg, 0.0, np.where(band, ramp, 1.0))
 alpha = np.minimum(ndi.gaussian_filter(alpha, 0.6), np.where(bg, 0.0, 1.0))
 
-# un-blend white fringe
+# un-blend the background colour out of the soft edge
 a3 = np.clip(alpha, 1e-3, 1)[..., None]
-col = np.clip((rgb - (1 - a3) * 255) / a3, 0, 255)
+col = np.clip((rgb - (1 - a3) * KEY) / a3, 0, 255)
 rgba = np.dstack([col, alpha * 255]).astype(np.uint8)
 img = Image.fromarray(rgba, "RGBA")
 

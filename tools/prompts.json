@@ -226,6 +226,104 @@
       "ar": "9:16",
       "cutout": true,
       "prompt": "The first reference photo shows a luxury die-cut wedding invitation (the card held in the hand on the left): a butter-cream panel with rounded ends, a lilac die-cut backing layer behind it, lush lilac blossoms with metallic gold-foil outlines and sage leaves climbing densely around the panel edges, and a gold satin ribbon bow at the top. Recreate THIS card design faithfully — same flower art, same gold foil, same layering, same colors — as a TALL PORTRAIT card: a tall cream panel with a rounded arched top and rounded bottom, lilac die-cut backing peeking out around it, flower clusters densest along the left side and bottom-left, more flowers at the top-right and bottom-right, a gold ribbon bow at the top centre. The cream centre panel must be COMPLETELY EMPTY: no text, no names, no letters, no logo — just smooth butter-cream paper with a very faint tone-on-tone floral pattern. Flowers stay around the edges and corners and must not cover the centre. Shown flat and straight-on (top-down, no perspective, no hand, no background objects), the whole card fully inside the frame, isolated on a pure solid flat white #FFFFFF background, soft subtle shadow only under the card."
+    },
+    {
+      "name": "s_paper",
+      "ref": "none",
+      "ar": "1:1",
+      "cutout": false,
+      "prompt": "A seamless, tileable background texture of warm ivory card stock (#FAF7F0 base) with an extremely faint, low-contrast tone-on-tone watermark pattern of scattered eucalyptus leaves, olive sprigs and small roses in a slightly deeper ivory (#F1ECE0), plus fine natural paper grain. Perfectly flat, even, shadowless lighting; no vignette; repeats edge-to-edge without seams. Only ivory/cream tones. No text, no objects."
+    },
+    {
+      "name": "s_top_l",
+      "ref": "none",
+      "ar": "16:9",
+      "cutout": true,
+      "prompt": "Botanical style: realistic, highly detailed premium stationery illustration (NOT loose watercolor, not blurry) of lush white and ivory garden roses, a few blush-white ranunculus, silver-dollar and seeded eucalyptus in soft sage green (#8A9A7B, #C5D1BC), slender olive branches and tiny baby's breath, with delicate thin champagne-gold (#C9A96E) foil edges on some leaves and petals; soft natural shading and depth. Palette strictly ivory, white, sage green, eucalyptus and champagne gold — absolutely no purple, lilac, pink-red or marigold, no religious symbols. A lush, graceful floral cluster designed to hang from the TOP-LEFT of a web page: 5 complete open white garden roses of different sizes, 2 ranunculus, buds, eucalyptus and olive sprigs on arching stems, arranged in a sweeping crescent — dense on the left, trailing elegantly to the right and slightly downward. Every flower, bud and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid dark charcoal background #2B2B2B (single colour, no gradient, no texture, no shadow), no text, no border."
+    },
+    {
+      "name": "s_top_r",
+      "ref": "none",
+      "ar": "16:9",
+      "cutout": true,
+      "prompt": "Botanical style: realistic, highly detailed premium stationery illustration (NOT loose watercolor, not blurry) of lush white and ivory garden roses, a few blush-white ranunculus, silver-dollar and seeded eucalyptus in soft sage green (#8A9A7B, #C5D1BC), slender olive branches and tiny baby's breath, with delicate thin champagne-gold (#C9A96E) foil edges on some leaves and petals; soft natural shading and depth. Palette strictly ivory, white, sage green, eucalyptus and champagne gold — absolutely no purple, lilac, pink-red or marigold, no religious symbols. A lush, graceful floral cluster designed to hang from the TOP-RIGHT of a web page: 5 complete open white garden roses of different sizes, 2 ranunculus, buds, eucalyptus and olive sprigs on arching stems, arranged in a sweeping crescent — dense on the right, trailing elegantly to the left and slightly downward. Every flower, bud and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid dark charcoal background #2B2B2B (single colour, no gradient, no texture, no shadow), no text, no border."
+    },
+    {
+      "name": "s_bot_l",
+      "ref": "none",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "Botanical style: realistic, highly detailed premium stationery illustration (NOT loose watercolor, not blurry) of lush white and ivory garden roses, a few blush-white ranunculus, silver-dollar and seeded eucalyptus in soft sage green (#8A9A7B, #C5D1BC), slender olive branches and tiny baby's breath, with delicate thin champagne-gold (#C9A96E) foil edges on some leaves and petals; soft natural shading and depth. Palette strictly ivory, white, sage green, eucalyptus and champagne gold — absolutely no purple, lilac, pink-red or marigold, no religious symbols. An elegant floral arrangement to sit in the BOTTOM-LEFT corner of a web page: 3 complete white garden roses, buds, tall eucalyptus stems and olive branches rising upward and leaning right, dense at the bottom-left. Every flower, bud and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid dark charcoal background #2B2B2B (single colour, no gradient, no texture, no shadow), no text, no border."
+    },
+    {
+      "name": "s_bot_r",
+      "ref": "none",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "Botanical style: realistic, highly detailed premium stationery illustration (NOT loose watercolor, not blurry) of lush white and ivory garden roses, a few blush-white ranunculus, silver-dollar and seeded eucalyptus in soft sage green (#8A9A7B, #C5D1BC), slender olive branches and tiny baby's breath, with delicate thin champagne-gold (#C9A96E) foil edges on some leaves and petals; soft natural shading and depth. Palette strictly ivory, white, sage green, eucalyptus and champagne gold — absolutely no purple, lilac, pink-red or marigold, no religious symbols. An elegant floral arrangement to sit in the BOTTOM-RIGHT corner of a web page: 3 complete white garden roses, buds, tall eucalyptus stems and olive branches rising upward and leaning left, dense at the bottom-right. Every flower, bud and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid dark charcoal background #2B2B2B (single colour, no gradient, no texture, no shadow), no text, no border."
+    },
+    {
+      "name": "s_corner",
+      "ref": "none",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "Botanical style: realistic, highly detailed premium stationery illustration (NOT loose watercolor, not blurry) of lush white and ivory garden roses, a few blush-white ranunculus, silver-dollar and seeded eucalyptus in soft sage green (#8A9A7B, #C5D1BC), slender olive branches and tiny baby's breath, with delicate thin champagne-gold (#C9A96E) foil edges on some leaves and petals; soft natural shading and depth. Palette strictly ivory, white, sage green, eucalyptus and champagne gold — absolutely no purple, lilac, pink-red or marigold, no religious symbols. A compact L-shaped corner floral cluster for the TOP-LEFT corner of a card: 3 white garden roses and buds densest exactly in the corner, with eucalyptus and olive sprigs extending to the right along the top and downward along the left side, tapering at both ends. Every flower, bud and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid dark charcoal background #2B2B2B (single colour, no gradient, no texture, no shadow), no text, no border."
+    },
+    {
+      "name": "s_sprig_tl",
+      "ref": "none",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "Botanical style: realistic, highly detailed premium stationery illustration (NOT loose watercolor, not blurry) of lush white and ivory garden roses, a few blush-white ranunculus, silver-dollar and seeded eucalyptus in soft sage green (#8A9A7B, #C5D1BC), slender olive branches and tiny baby's breath, with delicate thin champagne-gold (#C9A96E) foil edges on some leaves and petals; soft natural shading and depth. Palette strictly ivory, white, sage green, eucalyptus and champagne gold — absolutely no purple, lilac, pink-red or marigold, no religious symbols. A light, airy, minimal sprig for the TOP-LEFT corner of a page: one white rose, one bud and a few eucalyptus and olive leaves on slender stems, trailing gently toward the centre. Lots of negative space; delicate and sparse. Every flower, bud and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid dark charcoal background #2B2B2B (single colour, no gradient, no texture, no shadow), no text, no border."
+    },
+    {
+      "name": "s_sprig_br",
+      "ref": "none",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "Botanical style: realistic, highly detailed premium stationery illustration (NOT loose watercolor, not blurry) of lush white and ivory garden roses, a few blush-white ranunculus, silver-dollar and seeded eucalyptus in soft sage green (#8A9A7B, #C5D1BC), slender olive branches and tiny baby's breath, with delicate thin champagne-gold (#C9A96E) foil edges on some leaves and petals; soft natural shading and depth. Palette strictly ivory, white, sage green, eucalyptus and champagne gold — absolutely no purple, lilac, pink-red or marigold, no religious symbols. A light, airy, minimal sprig for the BOTTOM-RIGHT corner of a page: one white rose, one bud and a few eucalyptus and olive leaves on slender stems, reaching gently up and to the left. Lots of negative space; delicate and sparse. Every flower, bud and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid dark charcoal background #2B2B2B (single colour, no gradient, no texture, no shadow), no text, no border."
+    },
+    {
+      "name": "s_blooms",
+      "ref": "none",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "Botanical style: realistic, highly detailed premium stationery illustration (NOT loose watercolor, not blurry) of lush white and ivory garden roses, a few blush-white ranunculus, silver-dollar and seeded eucalyptus in soft sage green (#8A9A7B, #C5D1BC), slender olive branches and tiny baby's breath, with delicate thin champagne-gold (#C9A96E) foil edges on some leaves and petals; soft natural shading and depth. Palette strictly ivory, white, sage green, eucalyptus and champagne gold — absolutely no purple, lilac, pink-red or marigold, no religious symbols. A sprite sheet of 9 separate single elements in a clean 3x3 grid with wide spacing, none touching each other or the edges: 4 single open white garden roses seen from the top and three-quarter, 2 white ranunculus, 3 small eucalyptus + olive leaf sprigs. Same scale. Every flower, bud and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid dark charcoal background #2B2B2B (single colour, no gradient, no texture, no shadow), no text, no border."
+    },
+    {
+      "name": "s_petals",
+      "ref": "none",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "A sprite sheet of 16 separate tiny elements in a clean 4x4 grid with wide spacing, none touching each other or the edges: 11 single loose white and ivory rose petals (slightly curled, some with a faint blush at the base, soft realistic shading) and 5 single small eucalyptus/olive leaves in soft sage green. Realistic, detailed, soft natural light. Every flower, bud and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid dark charcoal background #2B2B2B (single colour, no gradient, no texture, no shadow), no text, no border."
+    },
+    {
+      "name": "s_card",
+      "ref": "diecut",
+      "ar": "16:9",
+      "cutout": true,
+      "prompt": "The first reference photo shows a luxury die-cut wedding invitation card (held in the hand on the left). Recreate the SAME card construction — a cream panel with rounded ends, a die-cut backing layer peeking out behind it, flowers clustered around the panel edges, a satin ribbon bow at the top — but RE-THEMED: the backing layer is soft sage green (#C5D1BC with a slightly deeper #8A9A7B edge), the flowers are realistic white garden roses, ranunculus, eucalyptus and olive sprigs with thin champagne-gold foil edges, the bow is champagne-gold satin, the panel is warm ivory (#FAF7F0) with a very faint tone-on-tone pattern. As a WIDE HORIZONTAL landscape card (as if the card were rotated 90 degrees): flowers densest at the left end and bottom-left, more at the top-right and bottom-right corners, bow at the top centre. The ivory centre panel must be COMPLETELY EMPTY — no text, no letters. Absolutely no purple or lilac. Shown flat, straight-on, no hand, the whole card fully inside the frame, isolated on a pure solid flat white #FFFFFF background, soft subtle shadow only under the card."
+    },
+    {
+      "name": "s_card_m",
+      "ref": "diecut",
+      "ar": "9:16",
+      "cutout": true,
+      "prompt": "The first reference photo shows a luxury die-cut wedding invitation card (held in the hand on the left). Recreate the SAME card construction — a cream panel with a rounded arched top and rounded bottom, a die-cut backing layer peeking out behind it, flowers clustered around the panel edges, a satin ribbon bow at the top — but RE-THEMED: the backing layer is soft sage green (#C5D1BC with a slightly deeper #8A9A7B edge), the flowers are realistic white garden roses, ranunculus, eucalyptus and olive sprigs with thin champagne-gold foil edges, the bow is champagne-gold satin, the panel is warm ivory (#FAF7F0) with a very faint tone-on-tone pattern. As a TALL PORTRAIT card, with a wide ivory panel (at least 70% of the card width): flowers densest along the left side and bottom-left, more at the top-right and bottom-right. The ivory centre panel must be COMPLETELY EMPTY — no text, no letters. Absolutely no purple or lilac. Shown flat, straight-on, no hand, the whole card fully inside the frame, isolated on a pure solid flat white #FFFFFF background, soft subtle shadow only under the card."
+    },
+    {
+      "name": "s_venue_wedding",
+      "ref": "none",
+      "ar": "4:3",
+      "cutout": false,
+      "prompt": "A refined watercolor-and-ink illustration of an elegant wedding ceremony setting: a graceful arch of white roses, eucalyptus and olive greenery, an aisle lined with white chairs and lanterns, soft sunlight, airy and romantic. Palette of ivory, white, sage green and champagne gold with fine gold-ink linework. Strictly NO religious elements (no church, temple, cross, altar, deity, lotus). The painting is a loose vignette that fades softly into a pure white #FFFFFF background at all edges. No text, no people, no border."
+    },
+    {
+      "name": "s_venue_reception",
+      "ref": "none",
+      "ar": "4:3",
+      "cutout": false,
+      "prompt": "A refined watercolor-and-ink illustration of an elegant wedding reception: round tables with ivory linens, tall centrepieces of white roses and eucalyptus, candles, crystal chandeliers glowing warm champagne-gold, soft draped fabric. Palette of ivory, white, sage green and champagne gold with fine gold-ink linework, absolutely no purple. The painting is a loose vignette that fades softly into a pure white #FFFFFF background at all edges. No text, no people, no border."
     }
   ]
 }

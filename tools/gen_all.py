@@ -13,6 +13,8 @@ REFS = {"right": [f"{S}/ref_flowers_right.jpg", f"{S}/ref_flowers_tl.jpg"],
         "hero": [f"{S}/ref_cream_panel.jpg", f"{S}/ref_flowers_right.jpg", f"{S}/ref_flowers_gold.jpg"],
         "couple": [f"{S}/ref_couple.jpg", f"{S}/ref_flowers_right.jpg"],
         "flowers": [f"{S}/ref_flowers_right.jpg", f"{S}/ref_flowers_gold.jpg"],
+        "none": [],
+        "logo": [f"{S}/../raw/logo_page.png"],
         "diecut": [f"{S}/card_ref.jpg", f"{S}/ref_flowers_gold.jpg", f"{S}/ref_flowers_leftcard.jpg"]}
 OUT = f"{ROOT}/assets/raw"
 os.makedirs(OUT, exist_ok=True)

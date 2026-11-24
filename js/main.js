@@ -19,7 +19,7 @@
     <article class="paper-card ev-card">
       <div class="pc-back"></div>
       <div class="pc-face">
-        <img class="ev-art" src="assets/img/${ev.key === "wedding" ? "venue_church" : "venue_reception"}.webp" alt="${ev.venue}" loading="lazy" />
+        <img class="ev-art" src="assets/img/${ev.key === "wedding" ? "venue_wedding" : "venue_reception"}.webp" alt="${ev.venue}" loading="lazy" />
         <h3 class="ev-title">${ev.title}</h3>
         <div class="divider"><span></span><svg class="heart"><use href="#heart"/></svg><span></span></div>
         <p class="ev-date">${ev.dateText}</p>
@@ -242,14 +242,14 @@
       cv.width = r.width * dpr; cv.height = r.height * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       const w = r.width, h = r.height;
       const g = ctx.createLinearGradient(0, 0, w, h);
-      g.addColorStop(0, "#A8771F"); g.addColorStop(.3, "#E2C06B"); g.addColorStop(.48, "#FBEBB5"); g.addColorStop(.62, "#CFA145"); g.addColorStop(1, "#8F661C");
+      g.addColorStop(0, "#9A7B45"); g.addColorStop(.3, "#D4B983"); g.addColorStop(.48, "#F6ECD3"); g.addColorStop(.62, "#C9A96E"); g.addColorStop(1, "#86693A");
       ctx.globalCompositeOperation = "source-over";
       ctx.fillStyle = g; ctx.beginPath(); ctx.arc(w / 2, h / 2, w / 2, 0, Math.PI * 2); ctx.fill();
       // foil grain + brushed lines
       for (let i = 0; i < 900; i++) { ctx.fillStyle = `rgba(255,255,255,${Math.random() * .18})`; ctx.fillRect(Math.random() * w, Math.random() * h, 1, 1); }
       ctx.strokeStyle = "rgba(255,246,210,.12)"; ctx.lineWidth = 1;
       for (let y = 0; y < h; y += 3) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y + 8); ctx.stroke(); }
-      ctx.fillStyle = "rgba(90,58,16,.75)"; ctx.font = `600 ${Math.max(10, w * .085)}px "Cormorant Garamond", serif`;
+      ctx.fillStyle = "rgba(70,62,40,.75)"; ctx.font = `600 ${Math.max(10, w * .085)}px "Cormorant Garamond", serif`;
       ctx.textAlign = "center"; ctx.textBaseline = "middle";
       ctx.fillText("SCRATCH", w / 2, h / 2 - w * .05); ctx.fillText("HERE", w / 2, h / 2 + w * .07);
     }
