@@ -93,7 +93,7 @@
     gsap.timeline({ onComplete: () => $("#cover").remove() })
       // the seal gently lifts and fades
       .to(".seal", { scale: .9, opacity: 0, duration: .7, ease: "power2.out" })
-      .to(".env-hint, .env-title", { opacity: 0, duration: .5, ease: "power1.out" }, 0)
+      .to(".env-hint, .env-title, .env-sub", { opacity: 0, duration: .5, ease: "power1.out" }, 0)
       .add(() => { Petals.burst(innerWidth / 2, innerHeight * .52, mobile ? 8 : 14); hero.play(0); }, .45)
       // the four flaps fold softly open in 3D, revealing the hero behind
       .to(".fw-top",    { rotateX: 120, duration: 2.2, ease: "sine.inOut" }, .3)

@@ -422,10 +422,10 @@ p { margin: 0; }
 .fw-bottom { transform-origin: 50% 100%; } .fw-bottom .flap { clip-path: polygon(0 100%, 100% 100%, 50% 45%); filter: brightness(.95); }
 .fw-top   { transform-origin: 50% 0; z-index: 2; } .fw-top .flap { clip-path: polygon(0 0, 100% 0, 50% 57%); }
 .fw-top::after, .fw-bottom::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(transparent, transparent); }
-.env-title { position: absolute; left: 0; right: 0; top: auto; bottom: calc(48% + var(--sw) * .515 + clamp(1rem, 3svh, 2rem)); text-align: center; color: #EBC98F; text-shadow: 0 1px 0 rgba(0,0,0,.25); }
+.env-title { position: absolute; left: 0; right: 0; top: clamp(2.5rem, 11svh, 7rem); text-align: center; color: #EBC98F; text-shadow: 0 1px 0 rgba(0,0,0,.25); }
 .env-names { font-family: var(--script); font-size: clamp(2.4rem, 6vw, 3.8rem); line-height: 1.1; display: flex; gap: .3em; justify-content: center; align-items: baseline; }
 .env-names em { font-family: var(--serif); font-style: italic; font-size: .5em; }
-.env-sub { margin-top: .3rem; font-weight: 600; font-size: .78rem; letter-spacing: .38em; text-transform: uppercase; color: #D9B57A; }
+.env-sub { position: absolute; left: 0; right: 0; bottom: calc(48% + var(--sw) * .515 + clamp(.9rem, 2.6svh, 1.6rem)); margin: 0; text-align: center; font-weight: 600; font-size: .78rem; letter-spacing: .38em; text-transform: uppercase; color: #D9B57A; text-shadow: 0 1px 0 rgba(0,0,0,.25); }
 .seal { position: absolute; left: 50%; top: 52%; z-index: 5; width: var(--sw); aspect-ratio: 583 / 600; margin: calc(var(--sw) * -.515) 0 0 calc(var(--sw) / -2);
   border: 0; padding: 0; background: none; cursor: pointer; filter: drop-shadow(0 8px 14px rgba(20,3,8,.55)); }
 .seal-wax, .seal-logo { transition: scale .4s var(--ease-out); }
