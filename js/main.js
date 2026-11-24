@@ -57,7 +57,7 @@
   const song = $("#song"), musicBtn = $("#musicBtn");
   let opened = false, songOk = true;
   song.addEventListener("error", () => { songOk = false; musicBtn.hidden = true; });
-  function fadeTo(v, ms) { const f0 = song.volume, t0 = performance.now(); (function f(t) { const k = Math.min(1, (t - t0) / ms); song.volume = f0 + (v - f0) * k; if (k < 1) requestAnimationFrame(f); })(t0); }
+  function fadeTo(v, ms) { const f0 = song.volume, t0 = performance.now(); (function f(t) { const k = Math.min(1, (t - t0) / ms); song.volume = Math.min(1, Math.max(0, f0 + (v - f0) * k)); if (k < 1) requestAnimationFrame(f); })(t0); }
   function startMusic() {
     if (!songOk) return;
     musicBtn.hidden = false;
