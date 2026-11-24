@@ -415,7 +415,7 @@ p { margin: 0; }
    ===================================================================== */
 /* ---------- opening: 4-flap envelope ---------- */
 #cover { background: none !important; display: block; perspective: 1700px; overflow: hidden; }
-.flapw { position: absolute; inset: 0; transform-style: preserve-3d; will-change: transform; filter: drop-shadow(0 6px 14px rgba(30,5,10,.45)); }
+.flapw { position: absolute; inset: 0; transform-style: preserve-3d; will-change: transform, opacity; backface-visibility: hidden; filter: drop-shadow(0 6px 14px rgba(30,5,10,.45)); }
 .flap { position: absolute; inset: 0; background: #5E1A24 url("../assets/img/envelope.webp") center / max(100vw, 100svh) no-repeat; }
 .fw-left  { transform-origin: 0 50%; }   .fw-left  .flap { clip-path: polygon(0 0, 0 100%, 52% 50%); filter: brightness(.86); }
 .fw-right { transform-origin: 100% 50%; } .fw-right .flap { clip-path: polygon(100% 0, 100% 100%, 48% 50%); filter: brightness(.86); }
@@ -434,9 +434,8 @@ p { margin: 0; }
 .seal-logo { position: absolute; inset: 21%; background: linear-gradient(160deg, #3A2206, #5A3510 55%, #3A2206); opacity: 1;
   -webkit-mask: url("../assets/img/logo.webp") center / contain no-repeat; mask: url("../assets/img/logo.webp") center / contain no-repeat;
   filter: drop-shadow(0 1px 0 rgba(255,232,180,.75)) drop-shadow(0 -1px 0 rgba(40,20,0,.35)); }
-.seal::after { content: ""; position: absolute; inset: -10%; border-radius: 50%; box-shadow: 0 0 0 0 rgba(235,201,143,.55); animation: sealPulse 2.4s ease-out infinite; pointer-events: none; }
 @keyframes sealPulse { 0% { box-shadow: 0 0 0 0 rgba(235,201,143,.5); } 100% { box-shadow: 0 0 0 26px rgba(235,201,143,0); } }
-.env-hint { position: absolute; left: 0; right: 0; top: calc(52% + clamp(80px, 19vw, 110px)); z-index: 3; text-align: center; color: #EBC98F; font-style: italic; font-size: 1.05rem; letter-spacing: .04em; animation: hintFade 2.4s ease-in-out infinite; }
+.env-hint { position: absolute; left: 0; right: 0; top: calc(52% + clamp(80px, 19vw, 110px)); z-index: 3; text-align: center; color: #EBC98F; font-style: italic; font-size: 1.05rem; letter-spacing: .04em; opacity: .85; }
 @keyframes hintFade { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
 
 /* ---------- hero (no logo) ---------- */

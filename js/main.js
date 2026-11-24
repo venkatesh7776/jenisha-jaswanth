@@ -77,17 +77,7 @@
     if (document.hidden) song.pause(); else if (!musicBtn.classList.contains("muted")) song.play().catch(() => {});
   });
 
-  /* ---------------- opening: envelope ---------------- */
-  if (!reduce) {
-    gsap.timeline({ defaults: { ease: "power3.out" } })
-      .from(".fw-left", { xPercent: -8, opacity: 0, duration: 1.2 }, 0)
-      .from(".fw-right", { xPercent: 8, opacity: 0, duration: 1.2 }, 0)
-      .from(".fw-bottom", { yPercent: 8, opacity: 0, duration: 1.2 }, .1)
-      .from(".fw-top", { yPercent: -8, opacity: 0, duration: 1.2 }, .2)
-      .from(".env-title > *", { y: 14, opacity: 0, duration: 1, stagger: .15 }, .7)
-      .fromTo(".seal", { scale: 0, rotate: -30 }, { scale: 1, rotate: 0, duration: 1, ease: "back.out(1.8)" }, .9)
-      .from(".env-hint", { opacity: 0, duration: .8 }, 1.6);
-  }
+  /* ---------------- opening: envelope (static until the seal is tapped) ---------------- */
   Petals.setIntensity(1); Petals.setSpeed(1.8, 1); Petals.start();   // quicker (but smooth) on the opening screen
   $("#openBtn").addEventListener("click", openInvitation);
 
@@ -98,17 +88,18 @@
     if (reduce) { $("#cover").remove(); document.body.classList.remove("is-locked"); hero.progress(1); afterOpen(); return; }
     Petals.setSpeed(1, 2500);   // ease back to the gentle site pace
     document.body.classList.remove("is-locked"); scrollTo(0, 0);
+    gsap.set(".flapw", { filter: "none", force3D: true });            // drop the heavy shadow filter while the flaps move → smooth 60fps
     gsap.timeline({ onComplete: () => $("#cover").remove() })
-      // the seal lifts and fades
-      .to(".seal", { scale: 1.25, rotate: 18, opacity: 0, duration: .55, ease: "back.in(1.6)" })
-      .to(".env-hint", { opacity: 0, duration: .3 }, 0)
-      .add(() => { Petals.burst(innerWidth / 2, innerHeight * .52, mobile ? 10 : 18); hero.play(0); }, .35)
-      // the four flaps fold open in 3D, revealing the hero behind
-      .to(".fw-top", { rotateX: 178, duration: 1.4, ease: "power3.inOut" }, .3)
-      .to(".fw-bottom", { rotateX: -178, duration: 1.4, ease: "power3.inOut" }, .42)
-      .to(".fw-left", { rotateY: -178, duration: 1.4, ease: "power3.inOut" }, .54)
-      .to(".fw-right", { rotateY: 178, duration: 1.4, ease: "power3.inOut" }, .54)
-      .to(".flapw", { opacity: 0, duration: .6, ease: "power1.in" }, 1.25);
+      // the seal gently lifts and fades
+      .to(".seal", { scale: .9, opacity: 0, duration: .7, ease: "power2.out" })
+      .to(".env-hint, .env-title", { opacity: 0, duration: .5, ease: "power1.out" }, 0)
+      .add(() => { Petals.burst(innerWidth / 2, innerHeight * .52, mobile ? 8 : 14); hero.play(0); }, .45)
+      // the four flaps fold softly open in 3D, revealing the hero behind
+      .to(".fw-top",    { rotateX: 120, duration: 2.2, ease: "sine.inOut" }, .3)
+      .to(".fw-bottom", { rotateX: -120, duration: 2.2, ease: "sine.inOut" }, .38)
+      .to(".fw-left",   { rotateY: -120, duration: 2.2, ease: "sine.inOut" }, .46)
+      .to(".fw-right",  { rotateY: 120, duration: 2.2, ease: "sine.inOut" }, .46)
+      .to(".flapw", { opacity: 0, duration: 1.4, ease: "sine.inOut" }, 1.0);
     afterOpen();
   }
 
