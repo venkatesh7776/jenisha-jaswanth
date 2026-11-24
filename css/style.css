@@ -414,7 +414,7 @@ p { margin: 0; }
    v4 — envelope opening, simple hero, envelope photo, gallery, simple closing
    ===================================================================== */
 /* ---------- opening: 4-flap envelope ---------- */
-#cover { background: none !important; display: block; perspective: 1700px; overflow: hidden; }
+#cover { --sw: clamp(118px, 30vw, 168px); background: none !important; display: block; perspective: 1700px; overflow: hidden; }
 .flapw { position: absolute; inset: 0; transform-style: preserve-3d; will-change: transform, opacity; backface-visibility: hidden; filter: drop-shadow(0 6px 14px rgba(30,5,10,.45)); }
 .flap { position: absolute; inset: 0; background: #5E1A24 url("../assets/img/envelope.webp") center / max(100vw, 100svh) no-repeat; }
 .fw-left  { transform-origin: 0 50%; }   .fw-left  .flap { clip-path: polygon(0 0, 0 100%, 52% 50%); filter: brightness(.86); }
@@ -422,11 +422,11 @@ p { margin: 0; }
 .fw-bottom { transform-origin: 50% 100%; } .fw-bottom .flap { clip-path: polygon(0 100%, 100% 100%, 50% 45%); filter: brightness(.95); }
 .fw-top   { transform-origin: 50% 0; z-index: 2; } .fw-top .flap { clip-path: polygon(0 0, 100% 0, 50% 57%); }
 .fw-top::after, .fw-bottom::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(transparent, transparent); }
-.env-title { position: absolute; left: 0; right: 0; top: clamp(2.5rem, 11svh, 7rem); text-align: center; color: #EBC98F; text-shadow: 0 1px 0 rgba(0,0,0,.25); }
+.env-title { position: absolute; left: 0; right: 0; top: auto; bottom: calc(48% + var(--sw) * .515 + clamp(1rem, 3svh, 2rem)); text-align: center; color: #EBC98F; text-shadow: 0 1px 0 rgba(0,0,0,.25); }
 .env-names { font-family: var(--script); font-size: clamp(2.4rem, 6vw, 3.8rem); line-height: 1.1; display: flex; gap: .3em; justify-content: center; align-items: baseline; }
 .env-names em { font-family: var(--serif); font-style: italic; font-size: .5em; }
 .env-sub { margin-top: .3rem; font-weight: 600; font-size: .78rem; letter-spacing: .38em; text-transform: uppercase; color: #D9B57A; }
-.seal { --sw: clamp(118px, 30vw, 168px); position: absolute; left: 50%; top: 52%; z-index: 5; width: var(--sw); aspect-ratio: 583 / 600; margin: calc(var(--sw) * -.515) 0 0 calc(var(--sw) / -2);
+.seal { position: absolute; left: 50%; top: 52%; z-index: 5; width: var(--sw); aspect-ratio: 583 / 600; margin: calc(var(--sw) * -.515) 0 0 calc(var(--sw) / -2);
   border: 0; padding: 0; background: none; cursor: pointer; filter: drop-shadow(0 8px 14px rgba(20,3,8,.55)); }
 .seal-wax, .seal-logo { transition: scale .4s var(--ease-out); }
 .seal:hover .seal-wax, .seal:hover .seal-logo { scale: 1.06; }
@@ -495,3 +495,5 @@ p { margin: 0; }
   .cl-base { width: 40%; bottom: -18px; }
   .cl-base.l { left: -14px; } .cl-base.r { right: -14px; }
 }
+.join-title { font-size: clamp(1.9rem, 4.4vw, 2.7rem); max-width: 17em; line-height: 1.2; }
+.ev-note { font-style: italic; color: var(--plum); font-size: 1.08rem; margin-top: .3rem; }

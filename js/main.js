@@ -26,6 +26,7 @@
         <p class="ev-time">${ev.timeText}</p>
         <p class="ev-venue">${ev.venue}</p>
         <p class="ev-addr">${ev.address}</p>
+        ${ev.note ? `<p class="ev-note">${ev.note}</p>` : ""}
         <a class="solid-btn ev-dir" target="_blank" rel="noopener" href="${ev.mapUrl || "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(ev.mapQuery)}">
           <svg><use href="#ico-pin"/></svg>Get Directions</a>
       </div>

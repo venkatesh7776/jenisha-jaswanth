@@ -21,7 +21,7 @@ window.WEDDING = {
       dateText: "Wednesday, 20th January 2027",
       timeText: "10:00 AM",
       venue: "CSI St. Mark’s Cathedral",
-      address: "1, Mahatma Gandhi Rd, Shivaji Nagar, Bengaluru, Karnataka 560001",
+      address: "Mahatma Gandhi Rd, Bengaluru",
       mapQuery: "CSI St. Mark's Cathedral, 1, Mahatma Gandhi Rd, Shanthala Nagar, Shivaji Nagar, Bengaluru, Karnataka 560001",
       mapUrl: "https://maps.app.goo.gl/qagrZf1JSQGNyMW9A",
     },
@@ -33,7 +33,8 @@ window.WEDDING = {
       dateText: "Wednesday, 20th January 2027",
       timeText: "From 12:00 PM",
       venue: "Zion – A Luxurious Hotel",
-      address: "1st Floor, 31, WH Hanumanthappa Rd, Gandhi Nagar, Bengaluru, Karnataka 560009",
+      address: "1st Floor, Gandhi Nagar, Bengaluru",
+      note: "Followed by lunch & celebration",
       mapQuery: "Zion - A Luxurious Hotel, 31, WH Hanumanthappa Rd, Gandhi Nagar, Bengaluru, Karnataka 560009",
       mapUrl: "https://maps.app.goo.gl/RrgkM5S2vgEAYNTN9",
     },
@@ -46,10 +47,10 @@ window.WEDDING = {
 
   // Photo gallery (3D coverflow). Add more photos to assets/img/gallery/ and list them here.
   gallery: [
+    "assets/img/gallery/g04.webp",
     "assets/img/gallery/g01.webp",
     "assets/img/gallery/g02.webp",
     "assets/img/gallery/g03.webp",
-    "assets/img/gallery/g04.webp",
   ],
 
   endNote: "Your presence and blessings would mean the world to us as we begin this beautiful journey together.",
