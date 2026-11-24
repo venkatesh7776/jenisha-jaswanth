@@ -176,11 +176,9 @@
     gsap.timeline({ scrollTrigger: { trigger: ".invite", start: "top 92%" }, defaults: { ease: "power3.out" } })
       .from(".invite .pc-back", { scale: .96, opacity: 0, duration: .6 })
       .from(".invite .pc-face", { y: 24, opacity: 0, duration: .6 }, "<.05")
-      .from(".invite .pc-bow", { y: -30, rotate: -15, opacity: 0, duration: .7, ease: "back.out(2)" }, "<.15")
       .from(".invite .pc-flower", { opacity: 0, scale: .85, duration: .7 }, "<")
       .from(".card-intro, .pair .person, .pair-amp", { opacity: 0, y: 12, duration: .55, stagger: .08 }, "<.1");
     sway(".invite .pc-flower.tl", 1.8, 6, "0 0");
-    sway(".invite .pc-bow", 4, 3, "50% 40%");
 
     // events
     $$(".ev-card").forEach((card, i) => {
