@@ -60,7 +60,7 @@
   function startMusic() {
     if (!songOk) return;
     musicBtn.hidden = false;
-    try { if (song.currentTime < .5) song.currentTime = .55; } catch (e) {}
+    try { if (song.currentTime < .6) song.currentTime = .7; } catch (e) {}
     song.volume = 0;
     song.play().then(() => { musicBtn.classList.add("playing"); fadeTo(.7, 2500); }).catch(() => { musicBtn.classList.add("muted"); });
   }
