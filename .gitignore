@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Raw / source material (kept locally, not needed by the website)
+assets/raw/
+assets/src/
+assets/gen/
+assets/video/
+*.JPG.jpeg
+*.pdf
+921521912_*.png
+Stephen Sanchez - *.mp3
+
+# Python
+__pycache__/
+*.pyc

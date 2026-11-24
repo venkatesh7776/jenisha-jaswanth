@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Jenisha &amp; Jaswanth · Wedding Invitation</title>
+  <meta name="description" content="Jenisha & Jaswanth — Wednesday, 20th January 2027, Bengaluru. You are cordially invited." />
+  <meta name="theme-color" content="#F8F3DC" />
+  <link rel="icon" href="assets/img/logo.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Pinyon+Script&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/img/couple_cut.webp" />
+  <link rel="stylesheet" href="css/style.css?v=17" />
+</head>
+<body class="is-locked">
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0" stop-color="#B8872F" /><stop offset=".45" stop-color="#EBCD7E" />
+        <stop offset=".7" stop-color="#C99A3E" /><stop offset="1" stop-color="#9C6F22" />
+      </linearGradient>
+      <symbol id="heart" viewBox="0 0 24 22"><path d="M12 21.5 2.6 12.2A5.6 5.6 0 0 1 10.5 4.3L12 5.8l1.5-1.5a5.6 5.6 0 0 1 7.9 7.9z" /></symbol>
+      <symbol id="bow" viewBox="0 0 120 90">
+        <path d="M60 40C44 22 18 12 10 22c-8 10 6 30 50 22z" /><path d="M60 40c16-18 42-28 50-18 8 10-6 30-50 22z" />
+        <path d="M58 44c-6 14-16 30-26 42l10 2c8-12 14-26 18-40z" /><path d="M62 44c6 14 16 30 26 42l-10 2c-8-12-14-26-18-40z" />
+        <ellipse cx="60" cy="42" rx="8" ry="7" />
+      </symbol>
+      <symbol id="ico-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z" /><circle cx="12" cy="9.5" r="2.5" /></symbol>
+      <symbol id="ico-route" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="18" r="2.2" /><circle cx="18" cy="6" r="2.2" /><path d="M8.2 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.8" /></symbol>
+      <symbol id="ico-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2" /><path d="M3.5 10h17M8 3v4M16 3v4" /></symbol>
+      <symbol id="ico-hand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V11m0-1.5V4a1.5 1.5 0 0 1 3 0v6m0-3.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7h-.5a6 6 0 0 1-5.2-3L3.6 13.6a1.5 1.5 0 0 1 2.4-1.8L9 15" /></symbol>
+    </defs>
+  </svg>
+
+  <canvas id="petals" aria-hidden="true"></canvas>
+
+  <!-- ===================== 1. OPENING ===================== -->
+  <div id="cover" role="dialog" aria-label="Open invitation">
+    <img class="cover-photo" src="assets/img/cover_photo.webp" alt="Jenisha and Jaswanth" />
+    <img class="cv-flower tl" src="assets/img/hero_top_l.webp" alt="" />
+    <img class="cv-flower tr" src="assets/img/hero_top_r.webp" alt="" />
+    <div class="cover-text">
+      <p class="cv label">You are invited to the wedding of</p>
+      <p class="cv cover-names"><span data-bind="bride"></span><em>&amp;</em><span data-bind="groom"></span></p>
+      <button id="openBtn" class="cv open-btn" type="button">
+        <svg class="btn-bow"><use href="#bow" /></svg><span>Open Invitation</span>
+      </button>
+    </div>
+  </div>
+
+  <button id="musicBtn" class="music-btn" type="button" aria-label="Mute music" aria-pressed="false" hidden>
+    <svg class="ic ic-on" viewBox="0 0 24 24" aria-hidden="true">
+      <path class="spk" d="M4 9.5h3.2L12 5.5v13l-4.8-4H4z" />
+      <path class="w1" d="M15.2 9.2a4 4 0 0 1 0 5.6" />
+      <path class="w2" d="M17.6 6.8a7.4 7.4 0 0 1 0 10.4" />
+    </svg>
+    <svg class="ic ic-off" viewBox="0 0 24 24" aria-hidden="true">
+      <path class="spk" d="M4 9.5h3.2L12 5.5v13l-4.8-4H4z" />
+      <path class="x" d="M15.5 9.5l5 5M20.5 9.5l-5 5" />
+    </svg>
+    <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>
+  </button>
+  <audio id="song" src="assets/audio/song.mp3" preload="auto" loop></audio>
+
+  <main id="site">
+
+    <!-- ===================== 2. HERO / DATE ===================== -->
+    <section id="hero" class="hero">
+      <div class="hero-fl top-l" data-depth="7"><img class="fl-sway a" src="assets/img/hero_top_l.webp" alt="" /></div>
+      <div class="hero-fl top-r" data-depth="7"><img class="fl-sway b" src="assets/img/hero_top_r.webp" alt="" /></div>
+      <div class="hero-fl bot-l" data-depth="5"><img class="fl-sway c" src="assets/img/hero_bot_l.webp" alt="" /></div>
+      <div class="hero-fl bot-r" data-depth="5"><img class="fl-sway d" src="assets/img/hero_bot_r.webp" alt="" /></div>
+
+      <div class="hero-inner" data-depth="2">
+        <img class="hero-logo" src="assets/img/logo.webp" alt="J & J monogram" />
+        <p class="label h-fade">Together with their families</p>
+        <h1 class="hero-names">
+          <span class="nm nm-b" data-bind="bride"></span>
+          <span class="amp">&amp;</span>
+          <span class="nm nm-g" data-bind="groom"></span>
+        </h1>
+        <p class="h-sub h-fade">request the honour of your presence as they unite in holy matrimony</p>
+        <div class="date-block">
+          <span class="db-side db-l">Wednesday</span>
+          <span class="db-bar"></span>
+          <span class="db-day">20</span>
+          <span class="db-bar"></span>
+          <span class="db-side db-r">January<br />2027</span>
+        </div>
+        <p class="label h-fade h-city" data-bind="city"></p>
+      </div>
+
+      <a class="scroll-cue" href="#story" aria-label="Scroll down"><span>Scroll</span><i></i></a>
+    </section>
+
+    <!-- ===================== 3. PHOTO + VERSE ===================== -->
+    <section id="story" class="section story">
+      <figure class="story-photo">
+        <div class="arch-photo"><img src="assets/img/couple.webp" alt="Jenisha and Jaswanth" loading="lazy" /></div>
+        <img class="story-sprig l" src="assets/img/frame_cluster.webp" alt="" loading="lazy" />
+        <img class="story-sprig r" src="assets/img/frame_cluster.webp" alt="" loading="lazy" />
+      </figure>
+      <blockquote class="verse">
+        <span class="q-mark">“</span>
+        <p class="verse-text"></p>
+        <div class="divider"><span></span><svg class="heart"><use href="#heart" /></svg><span></span></div>
+        <cite data-bind="verseRef"></cite>
+      </blockquote>
+    </section>
+
+    <!-- ===================== 4. COUPLE DETAILS (physical-card style) ===================== -->
+    <section id="couple" class="section">
+      <div class="paper-card invite">
+        <div class="pc-back"></div>
+        <div class="pc-face">
+          <svg class="pc-bow"><use href="#bow" /></svg>
+          <p class="card-intro">With joyous hearts, we invite you<br />to celebrate the holy union of</p>
+          <div class="pair">
+            <div class="person">
+              <p class="p-name" data-bind="bride"></p>
+              <p class="p-par" data-bind="brideParents"></p>
+            </div>
+            <div class="pair-amp">&amp;</div>
+            <div class="person">
+              <p class="p-name" data-bind="groom"></p>
+              <p class="p-par" data-bind="groomParents"></p>
+            </div>
+          </div>
+          <p class="card-outro">as they exchange vows and begin their journey together</p>
+          <img class="card-logo" src="assets/img/logo.webp" alt="" loading="lazy" />
+        </div>
+        <img class="pc-flower tl" src="assets/img/frame_cluster.webp" alt="" loading="lazy" />
+        <img class="pc-flower br" src="assets/img/frame_cluster.webp" alt="" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- ===================== 5. OUR BIG DAY — scratch to reveal ===================== -->
+    <section id="bigday" class="section countdown">
+      <header class="sec-head">
+        <p class="label">Scratch the gold to reveal</p>
+        <h2 class="sec-title">Our Big Day</h2>
+        <div class="divider"><span></span><svg class="heart"><use href="#heart" /></svg><span></span></div>
+      </header>
+
+      <div class="scratch-row" id="scratchRow">
+        <div class="medal scratch"><img class="medal-bloom" src="assets/img/blossoms/blossom_01.webp" alt="" />
+          <svg class="ring" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" /></svg>
+          <div class="medal-val"><b>20</b><small>Day</small></div><canvas class="foil"></canvas></div>
+        <div class="medal scratch"><img class="medal-bloom" src="assets/img/blossoms/blossom_02.webp" alt="" />
+          <svg class="ring" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" /></svg>
+          <div class="medal-val"><b class="sm">January</b><small>Month</small></div><canvas class="foil"></canvas></div>
+        <div class="medal scratch"><img class="medal-bloom" src="assets/img/blossoms/blossom_03.webp" alt="" />
+          <svg class="ring" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" /></svg>
+          <div class="medal-val"><b>2027</b><small>Year</small></div><canvas class="foil"></canvas></div>
+      </div>
+      <p class="scratch-hint" id="scratchHint"><svg><use href="#ico-hand" /></svg>Scratch each circle</p>
+
+    </section>
+
+    <!-- ===================== 6. COUNTDOWN ===================== -->
+    <section id="countdown" class="section cd-sec">
+      <div class="cd-stage paper-card">
+        <div class="pc-back"></div>
+        <div class="pc-face">
+          <p class="label">Counting down to</p>
+          <h2 class="cd-title">Forever</h2>
+          <div class="cd-arches" id="cd">
+            <div class="cd-arch" data-unit="days"><div class="flip-num"><span>00</span></div><p>Days</p></div>
+            <i class="cd-dot"></i>
+            <div class="cd-arch" data-unit="hours"><div class="flip-num"><span>00</span></div><p>Hours</p></div>
+            <i class="cd-dot"></i>
+            <div class="cd-arch" data-unit="minutes"><div class="flip-num"><span>00</span></div><p>Minutes</p></div>
+            <i class="cd-dot"></i>
+            <div class="cd-arch" data-unit="seconds"><div class="flip-num"><span>00</span></div><p>Seconds</p></div>
+          </div>
+          <div class="journey">
+            <span class="j-end">Today</span>
+            <div class="j-line"><div class="j-fill" id="jFill"></div><svg class="j-heart" id="jHeart"><use href="#heart" /></svg></div>
+            <span class="j-end">20 · 01 · 2027</span>
+          </div>
+          <p class="cd-done" id="cdDone" hidden>Happily married ♡</p>
+        </div>
+        <img class="pc-flower tl" src="assets/img/frame_cluster.webp" alt="" loading="lazy" />
+        <img class="pc-flower br" src="assets/img/frame_cluster.webp" alt="" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- ===================== 7–8. WEDDING & RECEPTION ===================== -->
+    <section id="events" class="section events-sec">
+      <header class="sec-head">
+        <p class="label">Join us</p>
+        <h2 class="sec-title">The Celebrations</h2>
+        <div class="divider"><span></span><svg class="heart"><use href="#heart" /></svg><span></span></div>
+      </header>
+      <div class="events" id="eventsList"></div>
+    </section>
+
+    <!-- ===================== 8. RSVP ===================== -->
+    <section id="rsvp" class="section">
+      <header class="sec-head">
+        <p class="label">Will you join us?</p>
+        <h2 class="sec-title">Kindly RSVP</h2>
+        <div class="divider"><span></span><svg class="heart"><use href="#heart" /></svg><span></span></div>
+      </header>
+      <div class="rsvp-card">
+        <div class="flip">
+          <form id="rsvpForm" class="face front" novalidate>
+            <label class="field"><span>Your name</span>
+              <input name="guestName" required autocomplete="name" placeholder="Full name" maxlength="80" /></label>
+            <fieldset class="field choice">
+              <legend>Will you attend?</legend>
+              <label><input type="radio" name="attending" value="Yes" checked /><span>Joyfully accept</span></label>
+              <label><input type="radio" name="attending" value="No" /><span>Regretfully decline</span></label>
+            </fieldset>
+            <div class="yes-only">
+              <div class="field guests"><span>Number of guests</span>
+                <div class="stepper"><button type="button" data-step="-1" aria-label="Fewer guests">−</button>
+                  <input name="guestCount" type="number" min="1" max="10" value="1" inputmode="numeric" aria-label="Number of guests" />
+                  <button type="button" data-step="1" aria-label="More guests">+</button></div></div>
+            </div>
+            <button class="solid-btn" type="submit">Send RSVP</button>
+            <p class="form-err" role="alert"></p>
+          </form>
+          <div class="face back" aria-live="polite">
+            <svg class="heart big"><use href="#heart" /></svg>
+            <p class="sec-title sm">Thank you</p>
+            <p class="thanks-msg"></p>
+          </div>
+        </div>
+        <img class="rsvp-flower" src="assets/img/sprig_br.webp" alt="" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- ===================== 9. SAVE THE DATE ===================== -->
+    <section id="savedate" class="section savedate">
+      <img class="sd-sprig a" src="assets/img/sprig_tl.webp" alt="" loading="lazy" />
+      <img class="sd-sprig b" src="assets/img/sprig_br.webp" alt="" loading="lazy" />
+      <p class="label">Mark your calendar</p>
+      <h2 class="sd-title">Save the Date</h2>
+      <p class="sd-date"><span>20</span><i></i><span>01</span><i></i><span>2027</span></p>
+      <p class="sd-sub">Wednesday · <span data-bind="city"></span></p>
+      <div class="sd-actions">
+        <a class="solid-btn" id="gcal" target="_blank" rel="noopener"><svg><use href="#ico-cal" /></svg>Google Calendar</a>
+        <button class="ghost-btn" id="ics" type="button"><svg><use href="#ico-cal" /></svg>Apple / Outlook</button>
+      </div>
+    </section>
+
+    <!-- ===================== 10. END NOTE — the physical card, turned sideways ===================== -->
+    <section id="closing" class="section closing">
+      <div class="closing-card">
+        <picture>
+          <source media="(max-width: 720px)" srcset="assets/img/closing_card_m.webp" />
+          <img class="cc-art" src="assets/img/closing_card.webp" alt="" loading="lazy" />
+        </picture>
+        <div class="cc-content">
+          <figure class="cc-photo"><img src="assets/img/couple.webp" alt="Jenisha and Jaswanth" loading="lazy" /></figure>
+          <div class="cc-text">
+            <span class="q-mark">“</span>
+            <p class="end-note" data-bind="endNote"></p>
+            <div class="divider"><span></span><svg class="heart"><use href="#heart" /></svg><span></span></div>
+            <p class="with-love">With love,</p>
+            <p class="sign"><span data-bind="bride"></span> <em>&amp;</em> <span data-bind="groom"></span></p>
+            <img class="closing-logo" src="assets/img/logo.webp" alt="" loading="lazy" />
+          </div>
+        </div>
+      </div>
+      <footer class="foot">20 · 01 · 2027 · Bengaluru</footer>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/config.js?v=17"></script>
+  <script src="js/petals.js?v=17"></script>
+  <script src="js/main.js?v=17"></script>
+</body>
+</html>

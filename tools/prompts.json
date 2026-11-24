@@ -1,0 +1,231 @@
+{
+  "_style": "The attached reference photos show the flower artwork to match; use them ONLY for the flower painting style, colors and petal shapes. Do NOT copy their composition, the pink card background, card edges, hands, cut-out shapes or any text. STYLE: Match the reference wedding card's flower art exactly — hand-painted watercolor lavender and lilac blossoms (soft magnolia/peony-like open flowers, 6-8 ruffled petals, pale lilac #D9C3E6 edges deepening to violet #7A4E9A toward the center, fine darker veins, small golden-yellow stamens), muted grey-sage leaves #9AA59A with subtle dark outlines, thin brown-bronze stems. Fine-art botanical illustration printed on premium card stock: crisp clean edges, soft watercolor gradients, gentle highlights, no harsh black outlines.",
+  "_foil": "Add delicate metallic gold-foil hairline outlines on some petal edges and leaf veins, like the gold-foiled die-cut card in the reference.",
+  "_iso": "ISOLATION: Place on a pure solid flat white #FFFFFF background. No shadows, no drop shadow, no paper texture, no vignette, no frame, no border, no text, no watermark, no signature. Every element must have clean, well-defined edges against the white.",
+  "assets": [
+    {
+      "name": "paper_tile",
+      "ref": "right",
+      "ar": "1:1",
+      "cutout": false,
+      "prompt": "Use the attached reference photos only for flower style and color palette; do not copy their composition, hands, card edges or any text. A seamless, tileable background texture that matches the reference invitation's paper exactly: soft pale lilac / blush-lavender card stock (#EEE3F3 base), with a very faint, low-contrast tone-on-tone watermark pattern of scattered flowers, leaves and thin stems in a slightly deeper lilac (#E2D2EC), plus a fine natural paper grain. Perfectly even, flat, shadowless lighting with no vignette and no hotspots so it can repeat edge-to-edge without visible seams. No text, no objects, no foreground flowers."
+    },
+    {
+      "name": "corner_tl",
+      "ref": "right",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "{style} A lush corner arrangement designed for the TOP-LEFT corner of a page: 5-7 open lilac blossoms of different sizes and angles plus a few buds and sage leaves, densely clustered at the top-left, with the outermost flowers cropped off the top and left edges of the image, and a few stems and leaves trailing diagonally toward the image center, fading to sparse. The bottom-right half of the image stays empty white. {iso}"
+    },
+    {
+      "name": "corner_br",
+      "ref": "right",
+      "ar": "3:4",
+      "cutout": true,
+      "prompt": "{style} A tall, elegant floral spray growing up from the BOTTOM-RIGHT corner of a page, like the bottom-right of the reference card: 6-8 open lilac blossoms on branching brown stems with sage leaves and a few closed buds, densely clustered at the bottom right with flowers cropped by the bottom and right edges, getting lighter and more delicate toward the top, with one slender stem reaching about two-thirds up. The left half of the image stays mostly empty white. {iso}"
+    },
+    {
+      "name": "garland_body",
+      "ref": "left",
+      "ar": "21:9",
+      "cutout": true,
+      "prompt": "{style} {foil} A wide horizontal hanging floral garland seen from the front, for the very top of a website: a dense, continuous band of lilac blossoms, buds and sage leaves running across the full width, attached along the top edge of the image (the top flowers are cropped by the top edge), with a softly scalloped, irregular lower edge. Keep the garland in the top 45% of the image; do NOT add long hanging strands; the lower 55% of the image is empty white. {iso}"
+    },
+    {
+      "name": "garland_strands",
+      "ref": "left",
+      "ar": "16:9",
+      "cutout": true,
+      "prompt": "{style} {foil} A sprite sheet of 5 separate vertical hanging floral strands, standing side by side in a row with wide white gaps between them, none touching each other or the image edges. Each strand is a thin drooping vine hanging straight down from a small cluster of leaves at its top, with 2-4 small lilac blossoms and buds along it and one blossom at the tip. The 5 strands have different lengths (from 40% to 85% of the image height), all starting at the same top line. {iso}"
+    },
+    {
+      "name": "vine_left",
+      "ref": "right",
+      "ar": "9:16",
+      "cutout": true,
+      "prompt": "{style} A tall, slender vertical climbing floral vine for the LEFT edge of a web page, painted in full crisp detail (not faded, not blurred): one continuous gently S-curved brown stem running from the very top edge to the very bottom edge of the image, with grey-sage leaves along it and 7 open lilac blossoms of varying sizes plus 4 buds spaced along the stem, slightly fuller at the top and bottom. The vine is narrow and occupies only the left 35% of the image; the right 65% is completely empty white. {iso}"
+    },
+    {
+      "name": "spray_right",
+      "ref": "right",
+      "ar": "9:16",
+      "cutout": true,
+      "prompt": "{style} A tall floral spray for the RIGHT edge of a page, rising from the bottom: three slender branching brown stems growing up from the bottom-right, with sage leaves and 7-9 lilac blossoms and buds spread along them, densest at the bottom and tapering to a single bud near the top. The spray occupies only the right 45% of the image; the left side is empty white. {iso}"
+    },
+    {
+      "name": "blossoms_sheet",
+      "ref": "right",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "{style} A sprite sheet of 9 separate single lilac flowers arranged in a clean 3x3 grid, each fully isolated with wide white space around it, none touching each other or the edges: 3 fully open blossoms seen from the front, 2 three-quarter view blossoms, 2 side-view half-open blossoms, and 2 closed buds with a short stem and one leaf. Same size scale for all. {iso}"
+    },
+    {
+      "name": "petals_sheet",
+      "ref": "right",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "{style} A sprite sheet of 12 separate single loose flower petals detached from the lilac blossoms, arranged in a clean 4x3 grid with wide white space between them, none touching each other or the edges. Each petal is a single soft, slightly curled and twisted watercolor petal in a different shape and angle (flat, curled, folded, seen from the side), in shades ranging from very pale lilac to medium lavender to violet, with a subtle vein and a soft highlight. {iso}"
+    },
+    {
+      "name": "foreground_blossoms",
+      "ref": "right",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "{style} A sprite sheet of 4 large separate lilac blossoms in a clean 2x2 grid, each with a small cluster of 2-3 sage leaves, generous white space between them, none touching. Each blossom is shown big, close-up and detailed at a different angle (front, three-quarter left, three-quarter right, slightly from below). {iso}"
+    },
+    {
+      "name": "arch_border",
+      "ref": "left",
+      "ar": "3:4",
+      "cutout": true,
+      "prompt": "{style} {foil} A floral border that wraps around a tall arch shape (a rectangle with a fully rounded semicircular top, like a cathedral window or the reference card's cream panel): lilac blossoms, buds and sage leaves climbing densely up the left side and around the lower left, a lush cluster at the top-left of the curve, a smaller cluster at the top-right, and lighter trailing flowers down the right side and along the bottom. The flowers follow the arch outline only; the inside of the arch is completely empty white with no lines drawn. {iso}"
+    },
+    {
+      "name": "frame_cluster",
+      "ref": "right",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "{style} {foil} A compact, rounded corner floral cluster meant to overlap the top-left corner of an arch-shaped photo frame: 3-4 lilac blossoms with buds and sage leaves fanning out in an L shape (spreading to the right along the top and down along the left), dense in the corner and tapering at both ends. {iso}"
+    },
+    {
+      "name": "closing_base",
+      "ref": "left",
+      "ar": "21:9",
+      "cutout": true,
+      "prompt": "{style} {foil} A wide, low floral mound to sit at the base of a tall arch, like the flowers at the bottom of the reference die-cut card: a dense horizontal cluster of lilac blossoms, buds and sage leaves, tallest at the left and right ends and slightly lower in the middle, with a flat bottom edge. Occupies the lower 55% of the image; the top is empty white. {iso}"
+    },
+    {
+      "name": "hero_still",
+      "ref": "left",
+      "ar": "16:9",
+      "cutout": false,
+      "prompt": "Use the attached reference photos only for flower style and color palette; do not copy their composition, hands, card edges or any text. A dreamy, painterly wedding backdrop in the reference cards' palette for a website hero: soft pale lilac and warm cream gradient background with a gentle golden glow from the top center, softly out-of-focus watercolor lavender blossoms and sage leaves framing the top-left and bottom-right corners, a few tiny floating golden bokeh lights and drifting lilac petals. A large calm, empty, light area in the center for text. Shallow depth of field, airy, romantic, elegant. No text, no people, no arch, no frame."
+    },
+    {
+      "name": "hero_still_mobile",
+      "ref": "left",
+      "ar": "9:16",
+      "cutout": false,
+      "prompt": "Use the attached reference photos only for flower style and color palette; do not copy their composition, hands, card edges or any text. A dreamy, painterly wedding backdrop in the reference cards' palette for a mobile website hero: soft pale lilac and warm cream gradient background with a gentle golden glow from the top, softly out-of-focus watercolor lavender blossoms and sage leaves framing the top edge and the bottom-right corner, a few tiny floating golden bokeh lights and drifting lilac petals. A large calm, empty, light area in the middle for text. Shallow depth of field, airy, romantic, elegant. No text, no people, no arch, no frame."
+    },
+    {
+      "name": "paper_cream",
+      "ref": "left",
+      "ar": "1:1",
+      "cutout": false,
+      "prompt": "Use the attached reference photos only for color palette; do not copy their composition, hands, card edges, flowers or any text. A seamless, tileable background texture of warm ivory / cream card stock (#FBF7EE base) like the cream inner panel of the reference die-cut invitation, with an extremely faint, low-contrast tone-on-tone watermark of scattered leaves and small flowers in a slightly deeper cream (#F3EBDA), plus a fine natural paper grain. Perfectly even, flat, shadowless lighting, no vignette, no hotspots, repeatable edge-to-edge without seams. No color other than warm ivory and cream. No text, no objects."
+    },
+    {
+      "name": "sprig_tl",
+      "ref": "right",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "{style} {foil} A light, airy and minimal corner sprig for the TOP-LEFT corner of an elegant invitation page: only 3 lilac blossoms (one large, two small) and 2 buds on slender brown stems with a few sage leaves, entering from the top-left corner (cropped by the top and left edges) and trailing gently toward the center. Lots of negative space; delicate, sparse and refined, NOT dense. The rest of the image is empty white. {iso}"
+    },
+    {
+      "name": "sprig_br",
+      "ref": "right",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "{style} {foil} A light, airy and minimal corner sprig for the BOTTOM-RIGHT corner of an elegant invitation page: only 3 lilac blossoms (one large, two small) and 2 buds on slender brown stems with a few sage leaves, rising from the bottom-right corner (cropped by the bottom and right edges) and reaching gently up and to the left. Lots of negative space; delicate, sparse and refined, NOT dense. The rest of the image is empty white. {iso}"
+    },
+    {
+      "name": "gold_corner",
+      "ref": "left",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "A single elegant decorative corner ornament for the TOP-LEFT corner of an invitation card border: fine metallic gold-foil line art (#B8872F to #E9CB76 gradient) of a delicate climbing vine with tiny leaves and two small flower outlines, forming an L-shape along the top edge and left edge with graceful flourishes and curls. Thin hairline strokes only, no fill colors, no lavender, refined and minimal like engraved gold foil on a luxury wedding card. Isolated on a pure solid flat white #FFFFFF background. No text, no shadow, no paper texture."
+    },
+    {
+      "name": "paper_card",
+      "ref": "cream",
+      "ar": "1:1",
+      "cutout": false,
+      "prompt": "Use the attached reference photos only for style, colors and patterns; do not copy their composition, card edges, hands or any text. A seamless, tileable background texture that recreates the cream paper of the reference wedding card exactly: soft pale butter-cream card stock (#F8F3DC base) printed with a faint, low-contrast tone-on-tone pattern of loosely sketched flowers, leaves and thin stems in a slightly deeper warm beige (#ECE3C4), evenly scattered, like a subtle watermark, with fine paper grain. Perfectly flat, even, shadowless lighting; no vignette; must repeat edge-to-edge without visible seams. No text."
+    },
+    {
+      "name": "hero_bg",
+      "ref": "hero",
+      "ar": "16:9",
+      "cutout": false,
+      "prompt": "Use the attached reference photos only for style, colors and patterns; do not copy their composition, card edges, hands or any text. A luxurious wedding invitation website hero background, landscape. The whole frame is the pale butter-cream patterned card paper from the reference (#F8F3DC with faint tone-on-tone sketched flowers). Lush clusters of lavender and lilac watercolor blossoms with thin gold-foil outlines, sage leaves and buds frame the composition: a full cluster in the TOP-LEFT corner trailing down the left edge, a full cluster in the BOTTOM-RIGHT corner rising up the right edge, and a small delicate sprig at the top-right. Very soft lilac blush (#EADCEB) toward the extreme edges. The large central area (about 60% of the width) is calm, clean cream paper, left empty for text. A few loose lilac petals resting. Elegant, premium, matching the reference cards. No text, no people, no frame lines."
+    },
+    {
+      "name": "hero_bg_m",
+      "ref": "hero",
+      "ar": "9:16",
+      "cutout": false,
+      "prompt": "Use the attached reference photos only for style, colors and patterns; do not copy their composition, card edges, hands or any text. A luxurious wedding invitation website hero background, tall portrait for mobile. The whole frame is the pale butter-cream patterned card paper from the reference (#F8F3DC with faint tone-on-tone sketched flowers). Lavender and lilac watercolor blossoms with thin gold-foil outlines, sage leaves and buds: a cluster across the TOP-LEFT corner and a cluster in the BOTTOM-RIGHT corner, kept toward the edges. Very soft lilac blush toward the extreme edges. The large middle area (from 20% to 80% of the height) is calm, clean cream paper, left empty for text. No text, no people, no frame lines."
+    },
+    {
+      "name": "venue_church",
+      "ref": "flowers",
+      "ar": "4:3",
+      "cutout": false,
+      "prompt": "A refined watercolor and ink illustration of CSI St. Mark's Cathedral in Bengaluru, India: the white colonial-era cathedral with its central dome and lantern, classical arched entrance portico with columns, pale walls, a few trees and a path in front. Painted in a soft wedding palette of cream, warm white, muted sage and pale lavender with fine gold-ink linework, and two small lilac flower sprigs in the matching style of the reference at the lower corners. The painting is a loose vignette that fades softly into a pure white #FFFFFF background at all edges. No text, no people, no border."
+    },
+    {
+      "name": "venue_reception",
+      "ref": "flowers",
+      "ar": "4:3",
+      "cutout": false,
+      "prompt": "A refined watercolor and ink illustration of an elegant wedding reception banquet hall: round tables with ivory linens, tall lilac and white floral centerpieces in the style of the reference flowers, crystal chandeliers glowing warm gold, soft draped fabric. Painted in a soft wedding palette of cream, warm white, pale lavender and sage with fine gold-ink linework. The painting is a loose vignette that fades softly into a pure white #FFFFFF background at all edges. No text, no people, no border."
+    },
+    {
+      "name": "couple_art",
+      "ref": "couple",
+      "ar": "3:4",
+      "cutout": false,
+      "prompt": "Create an elegant, romantic watercolor wedding illustration of the exact couple in the first reference photo — keep their faces, hairstyles, glasses, skin tones and the same affectionate seated pose (she leaning into him, laughing; he touching her chin), the same outfits (his maroon shirt and black trousers, her white dress). Fine-art painterly watercolor with delicate ink linework, soft and luminous, flattering but true likeness. Behind them, a graceful arch of lavender and lilac watercolor blossoms with thin gold-foil outlines and sage leaves, in the exact flower style of the second reference. The painting fades softly into a pure white #FFFFFF background at the edges and bottom. No text, no frame."
+    },
+    {
+      "name": "couple_art2",
+      "ref": "couple",
+      "ar": "3:4",
+      "cutout": false,
+      "prompt": "Create a dreamy, elegant watercolor wedding portrait illustration of the exact couple in the first reference photo — keep their faces, hairstyles, his glasses and their skin tones recognisable — now standing together in wedding attire: the bride in an ivory-white bridal saree with a delicate gold border and a small lilac flower in her hair, the groom in a cream/ivory suit with a lilac boutonniere; he gently holds her as she smiles. Fine-art painterly watercolor with delicate ink linework. Behind them, a soft arch of lavender and lilac watercolor blossoms with thin gold-foil outlines and sage leaves, in the exact flower style of the second reference. The painting fades softly into a pure white #FFFFFF background at the edges and bottom. No text, no frame."
+    },
+    {
+      "name": "hero_top_l",
+      "ref": "flowers",
+      "ar": "16:9",
+      "cutout": true,
+      "prompt": "Match the flower artwork of the attached reference photos (the lilac blossoms printed on the wedding cards, with thin gold-foil edges). Rendering: highly detailed, lifelike, realistic botanical illustration like premium printed invitation art — rich depth, soft realistic shading, crisp layered petals with delicate veins, golden stamens, thin metallic gold-foil edges on some petals, muted sage-grey leaves, slender brown stems. NOT a loose watercolor wash, not blurry. Use the references only for flower style — do not copy their composition, card edges, hands or text. A lush, graceful floral cluster designed to hang from the TOP-LEFT of a web page: 6 complete open lilac blossoms of different sizes and angles, 4 buds and sage leaves on arching stems, arranged in a sweeping crescent — dense on the left, trailing elegantly to the right and slightly downward. Every flower, bud and leaf must be COMPLETE and fully inside the frame with a clear white margin on all sides — nothing cropped by the image edges. Isolated on a pure solid flat white #FFFFFF background, no shadow, no text, no border."
+    },
+    {
+      "name": "hero_top_r",
+      "ref": "flowers",
+      "ar": "16:9",
+      "cutout": true,
+      "prompt": "Match the flower artwork of the attached reference photos (the lilac blossoms printed on the wedding cards, with thin gold-foil edges). Rendering: highly detailed, lifelike, realistic botanical illustration like premium printed invitation art — rich depth, soft realistic shading, crisp layered petals with delicate veins, golden stamens, thin metallic gold-foil edges on some petals, muted sage-grey leaves, slender brown stems. NOT a loose watercolor wash, not blurry. Use the references only for flower style — do not copy their composition, card edges, hands or text. A lush, graceful floral cluster designed to hang from the TOP-RIGHT of a web page: 6 complete open lilac blossoms of different sizes and angles, 4 buds and sage leaves on arching stems, arranged in a sweeping crescent — dense on the right, trailing elegantly to the left and slightly downward. Every flower, bud and leaf must be COMPLETE and fully inside the frame with a clear white margin on all sides — nothing cropped by the image edges. Isolated on a pure solid flat white #FFFFFF background, no shadow, no text, no border."
+    },
+    {
+      "name": "hero_bot_l",
+      "ref": "flowers",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "Match the flower artwork of the attached reference photos (the lilac blossoms printed on the wedding cards, with thin gold-foil edges). Rendering: highly detailed, lifelike, realistic botanical illustration like premium printed invitation art — rich depth, soft realistic shading, crisp layered petals with delicate veins, golden stamens, thin metallic gold-foil edges on some petals, muted sage-grey leaves, slender brown stems. NOT a loose watercolor wash, not blurry. Use the references only for flower style — do not copy their composition, card edges, hands or text. An elegant floral arrangement to sit in the BOTTOM-LEFT corner of a web page: 4 complete open lilac blossoms and 3 buds with sage leaves on stems rising upward and leaning to the right, dense at the bottom-left. Every flower, bud and leaf must be COMPLETE and fully inside the frame with a clear white margin on all sides — nothing cropped by the image edges. Isolated on a pure solid flat white #FFFFFF background, no shadow, no text, no border."
+    },
+    {
+      "name": "hero_bot_r",
+      "ref": "flowers",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "Match the flower artwork of the attached reference photos (the lilac blossoms printed on the wedding cards, with thin gold-foil edges). Rendering: highly detailed, lifelike, realistic botanical illustration like premium printed invitation art — rich depth, soft realistic shading, crisp layered petals with delicate veins, golden stamens, thin metallic gold-foil edges on some petals, muted sage-grey leaves, slender brown stems. NOT a loose watercolor wash, not blurry. Use the references only for flower style — do not copy their composition, card edges, hands or text. An elegant floral arrangement to sit in the BOTTOM-RIGHT corner of a web page: 4 complete open lilac blossoms and 3 buds with sage leaves on stems rising upward and leaning to the left, dense at the bottom-right. Every flower, bud and leaf must be COMPLETE and fully inside the frame with a clear white margin on all sides — nothing cropped by the image edges. Isolated on a pure solid flat white #FFFFFF background, no shadow, no text, no border."
+    },
+    {
+      "name": "closing_card",
+      "ref": "diecut",
+      "ar": "16:9",
+      "cutout": true,
+      "prompt": "The first reference photo shows a luxury die-cut wedding invitation (the card held in the hand on the left): a butter-cream panel with rounded ends, a lilac die-cut backing layer behind it, lush lilac blossoms with metallic gold-foil outlines and sage leaves climbing densely around the panel edges, and a gold satin ribbon bow at the top. Recreate THIS card design faithfully — same flower art, same gold foil, same layering, same colors — but as a WIDE HORIZONTAL landscape card, as if the card were rotated 90 degrees: a wide cream panel with gently rounded left and right ends, lilac die-cut backing peeking out around it, flower clusters densest at the left end and bottom-left, more flowers at the top-right and bottom-right corners, a gold ribbon bow at the top centre. The cream centre panel must be COMPLETELY EMPTY: no text, no names, no letters, no logo — just smooth butter-cream paper with a very faint tone-on-tone floral pattern. Flowers stay around the edges and corners and must not cover the centre. Shown flat and straight-on (top-down, no perspective, no hand, no background objects), the whole card fully inside the frame, isolated on a pure solid flat white #FFFFFF background, soft subtle shadow only under the card."
+    },
+    {
+      "name": "closing_card_m",
+      "ref": "diecut",
+      "ar": "9:16",
+      "cutout": true,
+      "prompt": "The first reference photo shows a luxury die-cut wedding invitation (the card held in the hand on the left): a butter-cream panel with rounded ends, a lilac die-cut backing layer behind it, lush lilac blossoms with metallic gold-foil outlines and sage leaves climbing densely around the panel edges, and a gold satin ribbon bow at the top. Recreate THIS card design faithfully — same flower art, same gold foil, same layering, same colors — as a TALL PORTRAIT card: a tall cream panel with a rounded arched top and rounded bottom, lilac die-cut backing peeking out around it, flower clusters densest along the left side and bottom-left, more flowers at the top-right and bottom-right, a gold ribbon bow at the top centre. The cream centre panel must be COMPLETELY EMPTY: no text, no names, no letters, no logo — just smooth butter-cream paper with a very faint tone-on-tone floral pattern. Flowers stay around the edges and corners and must not cover the centre. Shown flat and straight-on (top-down, no perspective, no hand, no background objects), the whole card fully inside the frame, isolated on a pure solid flat white #FFFFFF background, soft subtle shadow only under the card."
+    }
+  ]
+}
