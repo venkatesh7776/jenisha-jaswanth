@@ -409,3 +409,68 @@ p { margin: 0; }
   .closing-logo { width: 42px; }
 }
 @media (max-width: 720px) { .cc-text .sign { font-size: 1.6rem; } .cc-text .end-note { font-size: .9rem; } }
+
+/* =====================================================================
+   v4 — envelope opening, simple hero, envelope photo, gallery, simple closing
+   ===================================================================== */
+/* ---------- opening: 4-flap envelope ---------- */
+#cover { background: none !important; display: block; perspective: 1700px; overflow: hidden; }
+.flapw { position: absolute; inset: 0; transform-style: preserve-3d; will-change: transform; filter: drop-shadow(0 6px 14px rgba(30,5,10,.45)); }
+.flap { position: absolute; inset: 0; background: #5E1A24 url("../assets/img/envelope.webp") center / max(100vw, 100svh) no-repeat; }
+.fw-left  { transform-origin: 0 50%; }   .fw-left  .flap { clip-path: polygon(0 0, 0 100%, 52% 50%); filter: brightness(.86); }
+.fw-right { transform-origin: 100% 50%; } .fw-right .flap { clip-path: polygon(100% 0, 100% 100%, 48% 50%); filter: brightness(.86); }
+.fw-bottom { transform-origin: 50% 100%; } .fw-bottom .flap { clip-path: polygon(0 100%, 100% 100%, 50% 45%); filter: brightness(.95); }
+.fw-top   { transform-origin: 50% 0; z-index: 2; } .fw-top .flap { clip-path: polygon(0 0, 100% 0, 50% 57%); }
+.fw-top::after, .fw-bottom::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(transparent, transparent); }
+.env-title { position: absolute; left: 0; right: 0; top: clamp(2.5rem, 11svh, 7rem); text-align: center; color: #EBC98F; text-shadow: 0 1px 0 rgba(0,0,0,.25); }
+.env-names { font-family: var(--script); font-size: clamp(2.4rem, 6vw, 3.8rem); line-height: 1.1; display: flex; gap: .3em; justify-content: center; align-items: baseline; }
+.env-names em { font-family: var(--serif); font-style: italic; font-size: .5em; }
+.env-sub { margin-top: .3rem; font-weight: 600; font-size: .78rem; letter-spacing: .38em; text-transform: uppercase; color: #D9B57A; }
+.seal { --sw: clamp(118px, 30vw, 168px); position: absolute; left: 50%; top: 52%; z-index: 5; width: var(--sw); aspect-ratio: 583 / 600; margin: calc(var(--sw) * -.515) 0 0 calc(var(--sw) / -2);
+  border: 0; padding: 0; background: none; cursor: pointer; filter: drop-shadow(0 8px 14px rgba(20,3,8,.55)); }
+.seal-wax, .seal-logo { transition: scale .4s var(--ease-out); }
+.seal:hover .seal-wax, .seal:hover .seal-logo { scale: 1.06; }
+.seal-wax { width: 100%; height: 100%; display: block; }
+.seal-logo { position: absolute; inset: 26%; background: linear-gradient(150deg, #7A541F, #5C3C12); opacity: .9;
+  -webkit-mask: url("../assets/img/logo.webp") center / contain no-repeat; mask: url("../assets/img/logo.webp") center / contain no-repeat;
+  filter: drop-shadow(0 1px 0 rgba(255,226,170,.55)); }
+.seal::after { content: ""; position: absolute; inset: -10%; border-radius: 50%; box-shadow: 0 0 0 0 rgba(235,201,143,.55); animation: sealPulse 2.4s ease-out infinite; pointer-events: none; }
+@keyframes sealPulse { 0% { box-shadow: 0 0 0 0 rgba(235,201,143,.5); } 100% { box-shadow: 0 0 0 26px rgba(235,201,143,0); } }
+.env-hint { position: absolute; left: 0; right: 0; top: calc(52% + clamp(80px, 19vw, 110px)); z-index: 3; text-align: center; color: #EBC98F; font-style: italic; font-size: 1.05rem; letter-spacing: .04em; animation: hintFade 2.4s ease-in-out infinite; }
+@keyframes hintFade { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
+
+/* ---------- hero (no logo) ---------- */
+.h-invite { margin-bottom: .4rem; }
+
+/* ---------- story: envelope photo composition ---------- */
+.story-env { margin: 0; width: min(460px, 86vw); }
+.story-env img { width: 100%; filter: drop-shadow(0 24px 34px rgba(62,11,20,.28)); }
+
+/* ---------- photo gallery (3D coverflow) ---------- */
+.gallery { overflow: hidden; }
+.gal-title { margin: 0; font-family: var(--serif); font-weight: 700; font-size: clamp(2rem, 5vw, 3rem); letter-spacing: .08em; text-transform: uppercase; color: var(--plum); }
+.cf { --w: clamp(230px, 34vw, 380px); position: relative; height: calc(var(--w) * 1.42); max-width: 1100px; margin: 0 auto; perspective: 1300px; touch-action: pan-y; user-select: none; outline: none; }
+.cf-card { position: absolute; left: 50%; top: 0; width: var(--w); aspect-ratio: 3 / 4.2; margin-left: calc(var(--w) / -2); border-radius: 26px; overflow: hidden; cursor: pointer;
+  background: var(--paper-2); box-shadow: 0 26px 50px -22px rgba(62,11,20,.55), 0 0 0 1px rgba(190,138,77,.35);
+  transition: transform .8s var(--ease-out), opacity .8s var(--ease-out), filter .8s var(--ease-out); will-change: transform; }
+.cf-card img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.cf-dots { display: flex; justify-content: center; gap: .55rem; margin-top: 2rem; }
+.cf-dots button { width: 10px; height: 10px; border-radius: 999px; border: 0; padding: 0; cursor: pointer; background: rgba(94,26,36,.25); transition: width .5s var(--ease-out), background .5s; }
+.cf-dots button.on { width: 38px; background: var(--plum); }
+
+/* ---------- closing: simple ---------- */
+.closing { position: relative; text-align: center; overflow: hidden; }
+.closing-simple { position: relative; z-index: 2; max-width: 640px; margin: 0 auto; display: grid; justify-items: center; gap: 1rem; padding: 1rem 0 .5rem; }
+.cl-seal { width: 86px; filter: drop-shadow(0 8px 12px rgba(62,11,20,.3)); }
+.closing-simple .end-note { font-style: italic; font-size: clamp(1.35rem, 3.2vw, 1.85rem); line-height: 1.45; color: var(--plum); max-width: 26em; }
+.closing-simple .sign { font-family: var(--script); color: var(--plum); font-size: clamp(2.6rem, 6.5vw, 3.8rem); line-height: 1.1; }
+.cl-sprig { position: absolute; width: min(24vw, 260px); pointer-events: none; z-index: 1; opacity: .95; }
+.cl-sprig.a { left: 0; top: 0; }
+.cl-sprig.b { right: 0; bottom: 0; }
+
+@media (max-width: 720px) {
+  .cf { --w: 66vw; }
+  .env-names { flex-direction: column; align-items: center; gap: 0; font-size: 2.7rem; }
+  .story-env { width: 88vw; }
+  .cl-sprig { width: 34vw; opacity: .85; }
+}

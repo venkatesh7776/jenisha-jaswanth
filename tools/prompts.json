@@ -415,6 +415,20 @@
       "ar": "4:3",
       "cutout": false,
       "prompt": "A refined watercolor-and-ink illustration of an elegant wedding reception: round tables with cream linens and burgundy napkins, tall centrepieces of burgundy and cream peonies with khaki greenery, candles, crystal chandeliers glowing warm gold, soft draped fabric. Palette of warm beige, cream, burgundy and antique gold with fine gold-ink linework. A loose vignette that fades softly into a pure white #FFFFFF background at all edges. No text, no people, no border."
+    },
+    {
+      "name": "m_envelope",
+      "ref": "maroon",
+      "ar": "1:1",
+      "cutout": false,
+      "prompt": "A seamless, tileable texture of deep burgundy (#5E1A24) luxury envelope paper, like the burgundy envelope in the reference, with an elegant blind-EMBOSSED tone-on-tone floral pattern (peonies, leaves and berry sprigs raised in the same burgundy, visible only through soft highlights and shadows), fine velvety paper grain. Perfectly even lighting, no vignette, repeats edge-to-edge without seams. Only burgundy tones — no gold, no text, no objects, no envelope edges."
+    },
+    {
+      "name": "m_seal",
+      "ref": "none",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "A realistic gold wax seal stamp seen from directly above: a round blob of shiny antique-gold wax with irregular melted edges, and a plain smooth empty circle pressed into the middle (no design inside). Centered with a wide margin, on a plain white background. No text."
     }
   ]
 }

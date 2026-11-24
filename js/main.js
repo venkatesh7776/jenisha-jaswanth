@@ -77,16 +77,16 @@
     if (document.hidden) song.pause(); else if (!musicBtn.classList.contains("muted")) song.play().catch(() => {});
   });
 
-  /* ---------------- opening ---------------- */
+  /* ---------------- opening: envelope ---------------- */
   if (!reduce) {
     gsap.timeline({ defaults: { ease: "power3.out" } })
-      .from(".cover-photo", { y: 60, opacity: 0, duration: 1.8 }, 0)
-      .from(".cv-flower.tl", { y: -160, x: -60, rotate: -10, opacity: 0, duration: 1.8 }, .2)
-      .from(".cv-flower.tr", { y: -160, x: 60, rotate: 10, opacity: 0, duration: 1.8 }, .3)
-      .from(".cover-text .cv", { y: 18, opacity: 0, duration: 1, stagger: .12 }, .8);
-    gsap.to(".cv-flower.tl", { rotate: 1.8, duration: 6, yoyo: true, repeat: -1, ease: "sine.inOut", delay: 2 });
-    gsap.to(".cv-flower.tr", { rotate: -1.8, duration: 6.8, yoyo: true, repeat: -1, ease: "sine.inOut", delay: 2.1 });
-    gsap.to(".btn-bow", { rotate: 5, duration: 2.6, yoyo: true, repeat: -1, ease: "sine.inOut" });
+      .from(".fw-left", { xPercent: -8, opacity: 0, duration: 1.2 }, 0)
+      .from(".fw-right", { xPercent: 8, opacity: 0, duration: 1.2 }, 0)
+      .from(".fw-bottom", { yPercent: 8, opacity: 0, duration: 1.2 }, .1)
+      .from(".fw-top", { yPercent: -8, opacity: 0, duration: 1.2 }, .2)
+      .from(".env-title > *", { y: 14, opacity: 0, duration: 1, stagger: .15 }, .7)
+      .fromTo(".seal", { scale: 0, rotate: -30 }, { scale: 1, rotate: 0, duration: 1, ease: "back.out(1.8)" }, .9)
+      .from(".env-hint", { opacity: 0, duration: .8 }, 1.6);
   }
   Petals.setIntensity(1); Petals.setSpeed(1.8, 1); Petals.start();   // quicker (but smooth) on the opening screen
   $("#openBtn").addEventListener("click", openInvitation);
@@ -96,16 +96,19 @@
     startMusic();
     const hero = buildHero();
     if (reduce) { $("#cover").remove(); document.body.classList.remove("is-locked"); hero.progress(1); afterOpen(); return; }
-    Petals.burst(innerWidth / 2, innerHeight * .55, mobile ? 10 : 18);
     Petals.setSpeed(1, 2500);   // ease back to the gentle site pace
+    document.body.classList.remove("is-locked"); scrollTo(0, 0);
     gsap.timeline({ onComplete: () => $("#cover").remove() })
-      .to(".btn-bow", { scale: 1.3, rotate: 25, opacity: 0, y: -16, duration: .45, ease: "back.in(2)" })
-      .to(".cover-text", { opacity: 0, y: -20, duration: .6, ease: "power2.in" }, "-=.1")
-      .to(".cover-photo", { y: 80, scale: 1.04, opacity: 0, duration: 1.1, ease: "power2.inOut" }, "<.1")
-      .to(".cv-flower.tl", { x: -200, y: -220, rotate: -14, duration: 1.3, ease: "power2.in" }, "<")
-      .to(".cv-flower.tr", { x: 200, y: -220, rotate: 14, duration: 1.3, ease: "power2.in" }, "<")
-      .add(() => { document.body.classList.remove("is-locked"); scrollTo(0, 0); hero.play(0); }, "-=.6")
-      .to("#cover", { opacity: 0, duration: .8, ease: "power1.out" }, "-=.6");
+      // the seal lifts and fades
+      .to(".seal", { scale: 1.25, rotate: 18, opacity: 0, duration: .55, ease: "back.in(1.6)" })
+      .to(".env-hint", { opacity: 0, duration: .3 }, 0)
+      .add(() => { Petals.burst(innerWidth / 2, innerHeight * .52, mobile ? 10 : 18); hero.play(0); }, .35)
+      // the four flaps fold open in 3D, revealing the hero behind
+      .to(".fw-top", { rotateX: 178, duration: 1.4, ease: "power3.inOut" }, .3)
+      .to(".fw-bottom", { rotateX: -178, duration: 1.4, ease: "power3.inOut" }, .42)
+      .to(".fw-left", { rotateY: -178, duration: 1.4, ease: "power3.inOut" }, .54)
+      .to(".fw-right", { rotateY: 178, duration: 1.4, ease: "power3.inOut" }, .54)
+      .to(".flapw", { opacity: 0, duration: .6, ease: "power1.in" }, 1.25);
     afterOpen();
   }
 
@@ -117,12 +120,10 @@
       .fromTo(".hero-fl.bot-l", { y: 160, x: -60, opacity: 0 }, { y: 0, x: 0, opacity: 1, duration: 1.6 }, .5)
       .fromTo(".hero-fl.bot-r", { y: 160, x: 60, opacity: 0 }, { y: 0, x: 0, opacity: 1, duration: 1.6 }, .6)
       .add(() => $$(".fl-sway").forEach((el) => el.classList.add("idle")), 2.2)
-      .fromTo(".hero-logo", { scale: .7, opacity: 0, filter: "blur(6px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 1.3 }, .5)
       .fromTo(".hero-inner > .label", { y: 12, opacity: 0 }, { y: 0, opacity: 1, duration: .9 }, .9)
       .fromTo(".nm-b", { clipPath: "inset(-20% 100% -20% 0)", x: -14 }, { clipPath: "inset(-20% 0% -20% 0)", x: 0, duration: 1.3, ease: "power2.inOut" }, 1.1)
       .fromTo(".amp", { scale: .4, opacity: 0 }, { scale: 1, opacity: 1, duration: .8, ease: "back.out(2)" }, 1.7)
       .fromTo(".nm-g", { clipPath: "inset(-20% 0 -20% 100%)", x: 14 }, { clipPath: "inset(-20% 0 -20% 0%)", x: 0, duration: 1.3, ease: "power2.inOut" }, 1.8)
-      .fromTo(".h-sub", { y: 12, opacity: 0 }, { y: 0, opacity: 1, duration: .9 }, 2.4)
       .fromTo(".db-bar", { scaleY: 0 }, { scaleY: 1, duration: .8, stagger: .1 }, 2.7)
       .fromTo(".db-day", { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: .9 }, 2.8)
       .fromTo(".db-l", { x: 16, opacity: 0 }, { x: 0, opacity: 1, duration: .9 }, 2.9)
@@ -158,14 +159,11 @@
 
     // photo + verse
     gsap.timeline({ scrollTrigger: { trigger: ".story", start: "top 75%" } })
-      .from(".story-photo", { y: 60, opacity: 0, duration: 1.2, ease: "power3.out" })
-      .from(".story-photo .arch-photo img", { scale: 1.18, duration: 2.2, ease: "power3.out" }, 0)
-      .from(".story-sprig.l", { x: -50, y: 40, opacity: 0, duration: 1.3, ease: "power3.out" }, .6)
-      .from(".story-sprig.r", { x: 50, y: 40, opacity: 0, duration: 1.3, ease: "power3.out" }, .7)
+      .from(".story-env", { y: 70, rotate: -3, opacity: 0, duration: 1.4, ease: "power3.out" })
       .from(".verse .q-mark", { y: -10, opacity: 0, duration: .8 }, .6)
       .from(".verse-text .w", { y: 14, opacity: 0, filter: "blur(4px)", duration: .8, stagger: .08, ease: "power2.out" }, .8)
       .from(".verse .divider span", { scaleX: 0, duration: .8 }, "-=.3")
-      .from(".verse .heart, .verse cite", { opacity: 0, y: 8, duration: .7, stagger: .1 }, "-=.5");
+      .from(".verse .heart", { opacity: 0, y: 8, duration: .7 }, "-=.5");
 
     // scratch medals + countdown
     up(".scratch .medal-bloom", ".scratch-row", { y: -20, scale: 0, stagger: .15, ease: "back.out(2)" });
@@ -193,7 +191,7 @@
       .from(".pair .person:first-child .p-name", { clipPath: "inset(-30% 100% -30% 0)", duration: 1.1, ease: "power2.inOut" }, "-=.3")
       .from(".pair-amp", { scale: .4, opacity: 0, duration: .7, ease: "back.out(2)" }, "-=.5")
       .from(".pair .person:last-child .p-name", { clipPath: "inset(-30% 0 -30% 100%)", duration: 1.1, ease: "power2.inOut" }, "-=.4")
-      .from(".p-par, .card-outro, .card-logo", { opacity: 0, y: 10, duration: .8, stagger: .12 }, "-=.5");
+      .from(".p-par", { opacity: 0, y: 10, duration: .8, stagger: .12 }, "-=.5");
     sway(".invite .pc-flower.tl", 1.8, 6, "0 0");
     sway(".invite .pc-bow", 4, 3, "50% 40%");
 
@@ -221,13 +219,15 @@
     sway(".sd-sprig.a", 1.8, 7, "0 0");
     sway(".sd-sprig.b", -1.8, 8, "100% 100%");
 
-    // closing card
-    gsap.timeline({ scrollTrigger: { trigger: ".closing-card", start: "top 78%" } })
-      .from(".cc-art", { y: 70, scale: .94, opacity: 0, rotate: -1.5, duration: 1.4, ease: "power3.out" })
-      .from(".cc-photo", { clipPath: "inset(100% 0 0 0 round 999px 999px 12px 12px)", duration: 1.4, ease: "power3.inOut" }, "-=.6")
-      .from(".cc-photo img", { scale: 1.15, duration: 2, ease: "power3.out" }, "<")
-      .from(".cc-text > *", { opacity: 0, y: 14, duration: .8, stagger: .12, ease: "power3.out" }, "-=1.2")
+    // closing (simple)
+    gsap.timeline({ scrollTrigger: { trigger: ".closing-simple", start: "top 80%" } })
+      .from(".cl-sprig.a", { x: -60, y: -40, opacity: 0, duration: 1.3, ease: "power3.out" })
+      .from(".cl-sprig.b", { x: 60, y: 40, opacity: 0, duration: 1.3, ease: "power3.out" }, "<.1")
+      .from(".cl-seal", { scale: 0, rotate: -30, duration: .9, ease: "back.out(1.8)" }, "<.2")
+      .from(".closing-simple > *:not(.cl-seal)", { opacity: 0, y: 14, duration: .8, stagger: .12, ease: "power3.out" }, "-=.4")
       .add(() => Petals.setIntensity(1.3));
+    sway(".cl-sprig.a", 1.6, 7, "0 0"); sway(".cl-sprig.b", -1.6, 8, "100% 100%");
+    gsap.from(".gal-title, #gallery .divider", { y: 20, opacity: 0, duration: 1, stagger: .12, ease: "power3.out", scrollTrigger: { trigger: "#gallery", start: "top 80%" } });
 
     ScrollTrigger.refresh();
   }
@@ -318,6 +318,44 @@
     if (e.target.closest("button, a, input, textarea, label, .foil, #cover")) return;
     Petals.sprinkle(e.clientX, e.clientY);
   });
+
+  /* ---------------- photo gallery: 3D coverflow (auto-plays, swipeable) ---------------- */
+  (function gallery() {
+    const root = $("#coverflow"), dots = $("#cfDots"); if (!root) return;
+    const photos = C.gallery && C.gallery.length ? C.gallery : [];
+    if (!photos.length) { $("#gallery").remove(); return; }
+    const slides = []; while (slides.length < Math.max(5, photos.length)) slides.push(...photos);   // enough cards for a full 3D fan
+    slides.forEach((src, i) => { const d = document.createElement("div"); d.className = "cf-card"; d.innerHTML = `<img src="${src}" alt="Jenisha and Jaswanth" loading="lazy" />`; d.addEventListener("click", () => { if (!dragged && i !== cur) go(i, true); }); root.appendChild(d); });
+    photos.forEach((_, i) => { const b = document.createElement("button"); b.type = "button"; b.setAttribute("aria-label", `Photo ${i + 1}`); b.addEventListener("click", () => go(closestIndexFor(i), true)); dots.appendChild(b); });
+    const cards = $$(".cf-card", root), N = cards.length;
+    let cur = 0, timer = null, idleUntil = 0, visible = false, dragged = false;
+    const closestIndexFor = (p) => { let best = cur, bd = 1e9; for (let i = 0; i < N; i++) if (i % photos.length === p) { const d = Math.abs(off(i)); if (d < bd) { bd = d; best = i; } } return best; };
+    const off = (i) => { let d = i - cur; if (d > N / 2) d -= N; if (d < -N / 2) d += N; return d; };
+    function layout() {
+      const w = cards[0].offsetWidth, spread = w * (mobile ? .52 : .62);
+      cards.forEach((c, i) => {
+        const o = off(i), a = Math.abs(o);
+        c.style.transform = `translateX(${o * spread}px) translateZ(${-a * 150}px) rotateY(${-Math.sign(o) * Math.min(a, 2) * 32}deg) scale(${1 - Math.min(a, 3) * .1})`;
+        c.style.opacity = a > 2 ? 0 : (1 - a * .22).toFixed(2);
+        c.style.filter = a ? `brightness(${1 - a * .12}) saturate(${1 - a * .15})` : "none";
+        c.style.zIndex = 10 - a; c.style.pointerEvents = a > 2 ? "none" : "auto";
+      });
+      $$("button", dots).forEach((b, i) => b.classList.toggle("on", i === ((cur % photos.length) + photos.length) % photos.length));
+    }
+    function go(i, user) { cur = ((i % N) + N) % N; layout(); if (user) idleUntil = Date.now() + 6000; }
+    const next = () => go(cur + 1), prev = () => go(cur - 1);
+    function tick() { if (visible && Date.now() > idleUntil && !document.hidden) next(); }
+    timer = setInterval(tick, 3200);
+    new IntersectionObserver((e) => { visible = e[0].isIntersecting; }, { threshold: .3 }).observe(root);
+    // swipe / drag
+    let x0 = null;
+    root.addEventListener("pointerdown", (e) => { x0 = e.clientX; dragged = false; idleUntil = Date.now() + 6000; });
+    addEventListener("pointerup", (e) => { if (x0 == null) return; const dx = e.clientX - x0; x0 = null; if (Math.abs(dx) > 40) { dragged = true; dx < 0 ? go(cur + 1, true) : go(cur - 1, true); setTimeout(() => (dragged = false), 50); } });
+    root.addEventListener("keydown", (e) => { if (e.key === "ArrowRight") go(cur + 1, true); if (e.key === "ArrowLeft") go(cur - 1, true); });
+    root.addEventListener("mouseenter", () => (idleUntil = Date.now() + 1e9)); root.addEventListener("mouseleave", () => (idleUntil = Date.now() + 1500));
+    addEventListener("resize", layout);
+    layout();
+  })();
 
   /* ---------------- RSVP → Google Sheet (Apps Script) ---------------- */
   const form = $("#rsvpForm");

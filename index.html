@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Pinyon+Script&display=swap" rel="stylesheet" />
   <link rel="preload" as="image" href="assets/img/couple_cut.webp" />
-  <link rel="stylesheet" href="css/style.css?v=42" />
+  <link rel="stylesheet" href="css/style.css?v=53" />
 </head>
 <body class="is-locked">
 
@@ -36,18 +36,22 @@
 
   <canvas id="petals" aria-hidden="true"></canvas>
 
-  <!-- ===================== 1. OPENING ===================== -->
+  <!-- ===================== 1. OPENING — envelope with wax seal ===================== -->
   <div id="cover" role="dialog" aria-label="Open invitation">
-    <img class="cover-photo" src="assets/img/cover_photo.webp" alt="Jenisha and Jaswanth" />
-    <img class="cv-flower tl" src="assets/img/hero_top_l.webp" alt="" />
-    <img class="cv-flower tr" src="assets/img/hero_top_r.webp" alt="" />
-    <div class="cover-text">
-      <p class="cv label">You are invited to the wedding of</p>
-      <p class="cv cover-names"><span data-bind="bride"></span><em>&amp;</em><span data-bind="groom"></span></p>
-      <button id="openBtn" class="cv open-btn" type="button">
-        <svg class="btn-bow"><use href="#bow" /></svg><span>Open Invitation</span>
-      </button>
+    <div class="flapw fw-left"><div class="flap"></div></div>
+    <div class="flapw fw-right"><div class="flap"></div></div>
+    <div class="flapw fw-bottom"><div class="flap"></div></div>
+    <div class="flapw fw-top"><div class="flap"></div>
+      <div class="env-title">
+        <p class="env-names"><span data-bind="bride"></span><em>&amp;</em><span data-bind="groom"></span></p>
+        <p class="env-sub">Wedding Invitation</p>
+      </div>
     </div>
+    <button id="openBtn" class="seal" type="button" aria-label="Open the invitation">
+      <img class="seal-wax" src="assets/img/seal.webp" alt="" />
+      <span class="seal-logo" aria-hidden="true"></span>
+    </button>
+    <p class="env-hint">Tap the seal to open</p>
   </div>
 
   <button id="musicBtn" class="music-btn" type="button" aria-label="Mute music" aria-pressed="false" hidden>
@@ -74,14 +78,12 @@
       <div class="hero-fl bot-r" data-depth="5"><img class="fl-sway d" src="assets/img/hero_bot_r.webp" alt="" /></div>
 
       <div class="hero-inner" data-depth="2">
-        <img class="hero-logo" src="assets/img/logo.webp" alt="J & J monogram" />
-        <p class="label h-fade">Together with their families</p>
+        <p class="label h-fade h-invite">You are invited to the wedding of</p>
         <h1 class="hero-names">
           <span class="nm nm-b" data-bind="bride"></span>
           <span class="amp">&amp;</span>
           <span class="nm nm-g" data-bind="groom"></span>
         </h1>
-        <p class="h-sub h-fade">request the honour of your presence as they unite in marriage</p>
         <div class="date-block">
           <span class="db-side db-l">Wednesday</span>
           <span class="db-bar"></span>
@@ -97,16 +99,11 @@
 
     <!-- ===================== 3. PHOTO + VERSE ===================== -->
     <section id="story" class="section story">
-      <figure class="story-photo">
-        <div class="arch-photo"><img src="assets/img/couple.webp" alt="Jenisha and Jaswanth" loading="lazy" /></div>
-        <img class="story-sprig l" src="assets/img/frame_cluster.webp" alt="" loading="lazy" />
-        <img class="story-sprig r" src="assets/img/frame_cluster.webp" alt="" loading="lazy" />
-      </figure>
+      <figure class="story-env"><img src="assets/img/story_envelope.webp" alt="Jenisha and Jaswanth" loading="lazy" /></figure>
       <blockquote class="verse">
         <span class="q-mark">“</span>
         <p class="verse-text"></p>
         <div class="divider"><span></span><svg class="heart"><use href="#heart" /></svg><span></span></div>
-        <cite data-bind="verseRef"></cite>
       </blockquote>
     </section>
 
@@ -116,7 +113,7 @@
         <div class="pc-back"></div>
         <div class="pc-face">
           <svg class="pc-bow"><use href="#bow" /></svg>
-          <p class="card-intro">With joyous hearts, we invite you<br />to celebrate the union of</p>
+          <p class="card-intro">With joyful hearts we invite you<br />to celebrate the wedding ceremony of</p>
           <div class="pair">
             <div class="person">
               <p class="p-name" data-bind="bride"></p>
@@ -128,8 +125,6 @@
               <p class="p-par" data-bind="groomParents"></p>
             </div>
           </div>
-          <p class="card-outro">as they exchange vows and begin their journey together</p>
-          <img class="card-logo" src="assets/img/logo.webp" alt="" loading="lazy" />
         </div>
         <img class="pc-flower tl" src="assets/img/frame_cluster.webp" alt="" loading="lazy" />
         <img class="pc-flower br" src="assets/img/frame_cluster.webp" alt="" loading="lazy" />
@@ -185,6 +180,16 @@
         <img class="pc-flower tl" src="assets/img/frame_cluster.webp" alt="" loading="lazy" />
         <img class="pc-flower br" src="assets/img/frame_cluster.webp" alt="" loading="lazy" />
       </div>
+    </section>
+
+    <!-- ===================== 7. PHOTO GALLERY — 3D coverflow ===================== -->
+    <section id="gallery" class="section gallery">
+      <header class="sec-head">
+        <h2 class="gal-title">Photo Gallery</h2>
+        <div class="divider"><span></span><svg class="heart"><use href="#heart" /></svg><span></span></div>
+      </header>
+      <div class="cf" id="coverflow" aria-roledescription="carousel" tabindex="0"></div>
+      <div class="cf-dots" id="cfDots" role="tablist"></div>
     </section>
 
     <!-- ===================== 7–8. WEDDING & RECEPTION ===================== -->
@@ -247,24 +252,16 @@
       </div>
     </section>
 
-    <!-- ===================== 10. END NOTE — the physical card, turned sideways ===================== -->
+    <!-- ===================== 10. END NOTE — simple ===================== -->
     <section id="closing" class="section closing">
-      <div class="closing-card">
-        <picture>
-          <source media="(max-width: 720px)" srcset="assets/img/closing_card_m.webp" />
-          <img class="cc-art" src="assets/img/closing_card.webp" alt="" loading="lazy" />
-        </picture>
-        <div class="cc-content">
-          <figure class="cc-photo"><img src="assets/img/couple.webp" alt="Jenisha and Jaswanth" loading="lazy" /></figure>
-          <div class="cc-text">
-            <span class="q-mark">“</span>
-            <p class="end-note" data-bind="endNote"></p>
-            <div class="divider"><span></span><svg class="heart"><use href="#heart" /></svg><span></span></div>
-            <p class="with-love">With love,</p>
-            <p class="sign"><span data-bind="bride"></span> <em>&amp;</em> <span data-bind="groom"></span></p>
-            <img class="closing-logo" src="assets/img/logo.webp" alt="" loading="lazy" />
-          </div>
-        </div>
+      <img class="cl-sprig a" src="assets/img/sprig_tl.webp" alt="" loading="lazy" />
+      <img class="cl-sprig b" src="assets/img/sprig_br.webp" alt="" loading="lazy" />
+      <div class="closing-simple">
+        <img class="cl-seal" src="assets/img/seal.webp" alt="" loading="lazy" />
+        <p class="end-note" data-bind="endNote"></p>
+        <div class="divider"><span></span><svg class="heart"><use href="#heart" /></svg><span></span></div>
+        <p class="with-love">With love,</p>
+        <p class="sign"><span data-bind="bride"></span> <em>&amp;</em> <span data-bind="groom"></span></p>
       </div>
       <footer class="foot">20 · 01 · 2027 · Bengaluru</footer>
     </section>
@@ -272,8 +269,8 @@
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="js/config.js?v=42"></script>
-  <script src="js/petals.js?v=42"></script>
-  <script src="js/main.js?v=42"></script>
+  <script src="js/config.js?v=53"></script>
+  <script src="js/petals.js?v=53"></script>
+  <script src="js/main.js?v=53"></script>
 </body>
 </html>

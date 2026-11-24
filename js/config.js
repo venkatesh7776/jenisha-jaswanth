@@ -44,6 +44,12 @@ window.WEDDING = {
     endpoint: "https://script.google.com/macros/s/AKfycbxhVrIbEEXNcZip8oF6AlMKPBZPQMk0ReRDyrwL0hKq8H37ckGYl8mjaUsWsRd4XKTKAA/exec",
   },
 
+  // Photo gallery (3D coverflow). Add more photos to assets/img/gallery/ and list them here.
+  gallery: [
+    "assets/img/gallery/g01.webp",
+    "assets/img/gallery/g02.webp",
+  ],
+
   endNote: "Your presence and blessings would mean the world to us as we begin this beautiful journey together.",
   music: "assets/audio/song.mp3",
 };
