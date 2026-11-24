@@ -180,18 +180,13 @@
       .add(updateJourney);
     sway(".cd-stage .pc-flower.tl", 1.8, 6, "0 0");
 
-    // couple card
-    gsap.timeline({ scrollTrigger: { trigger: ".invite", start: "top 78%" } })
-      .from(".invite .pc-back", { scale: .94, opacity: 0, duration: 1, ease: "power3.out" })
-      .from(".invite .pc-face", { y: 40, opacity: 0, duration: 1.1, ease: "power3.out" }, "-=.7")
-      .from(".invite .pc-bow", { y: -60, rotate: -20, opacity: 0, duration: 1.1, ease: "elastic.out(1, .5)" }, "-=.5")
-      .from(".invite .pc-flower.tl", { x: -80, y: -60, rotate: -12, opacity: 0, duration: 1.2, ease: "power3.out" }, "-=1")
-      .from(".invite .pc-flower.br", { x: 80, y: 60, opacity: 0, duration: 1.2, ease: "power3.out" }, "<.1")
-      .from(".card-intro", { opacity: 0, y: 12, duration: .8 }, "-=.6")
-      .from(".pair .person:first-child .p-name", { clipPath: "inset(-30% 100% -30% 0)", duration: 1.1, ease: "power2.inOut" }, "-=.3")
-      .from(".pair-amp", { scale: .4, opacity: 0, duration: .7, ease: "back.out(2)" }, "-=.5")
-      .from(".pair .person:last-child .p-name", { clipPath: "inset(-30% 0 -30% 100%)", duration: 1.1, ease: "power2.inOut" }, "-=.4")
-      .from(".p-par", { opacity: 0, y: 10, duration: .8, stagger: .12 }, "-=.5");
+    // couple card — quick, starts as soon as the card enters the screen
+    gsap.timeline({ scrollTrigger: { trigger: ".invite", start: "top 92%" }, defaults: { ease: "power3.out" } })
+      .from(".invite .pc-back", { scale: .96, opacity: 0, duration: .6 })
+      .from(".invite .pc-face", { y: 24, opacity: 0, duration: .6 }, "<.05")
+      .from(".invite .pc-bow", { y: -30, rotate: -15, opacity: 0, duration: .7, ease: "back.out(2)" }, "<.15")
+      .from(".invite .pc-flower", { opacity: 0, scale: .85, duration: .7 }, "<")
+      .from(".card-intro, .pair .person, .pair-amp", { opacity: 0, y: 12, duration: .55, stagger: .08 }, "<.1");
     sway(".invite .pc-flower.tl", 1.8, 6, "0 0");
     sway(".invite .pc-bow", 4, 3, "50% 40%");
 
@@ -219,14 +214,15 @@
     sway(".sd-sprig.a", 1.8, 7, "0 0");
     sway(".sd-sprig.b", -1.8, 8, "100% 100%");
 
-    // closing (simple)
-    gsap.timeline({ scrollTrigger: { trigger: ".closing-simple", start: "top 80%" } })
-      .from(".cl-sprig.a", { x: -60, y: -40, opacity: 0, duration: 1.3, ease: "power3.out" })
-      .from(".cl-sprig.b", { x: 60, y: 40, opacity: 0, duration: 1.3, ease: "power3.out" }, "<.1")
-      .from(".cl-seal", { scale: 0, rotate: -30, duration: .9, ease: "back.out(1.8)" }, "<.2")
-      .from(".closing-simple > *:not(.cl-seal)", { opacity: 0, y: 14, duration: .8, stagger: .12, ease: "power3.out" }, "-=.4")
+    // closing — arched panel with floral crown
+    gsap.timeline({ scrollTrigger: { trigger: ".closing-frame", start: "top 85%" }, defaults: { ease: "power3.out" } })
+      .from(".closing-frame .closing-simple", { y: 40, opacity: 0, duration: .9 })
+      .from(".cl-crown.l", { x: -60, y: -40, rotate: -8, opacity: 0, duration: 1.1 }, "<.15")
+      .from(".cl-crown.r", { x: 60, y: -40, rotate: 8, opacity: 0, duration: 1.1 }, "<.05")
+      .from(".cl-base", { opacity: 0, y: 20, duration: .9, stagger: .1 }, "<.2")
+      .from(".closing-simple > *", { opacity: 0, y: 12, duration: .6, stagger: .08 }, "<.1")
       .add(() => Petals.setIntensity(1.3));
-    sway(".cl-sprig.a", 1.6, 7, "0 0"); sway(".cl-sprig.b", -1.6, 8, "100% 100%");
+    sway(".cl-crown.l", 1.6, 6.5, "30% 30%"); sway(".cl-crown.r", -1.6, 7, "70% 30%");
     gsap.from(".gal-title, #gallery .divider", { y: 20, opacity: 0, duration: 1, stagger: .12, ease: "power3.out", scrollTrigger: { trigger: "#gallery", start: "top 80%" } });
 
     ScrollTrigger.refresh();
@@ -345,7 +341,7 @@
     function go(i, user) { cur = ((i % N) + N) % N; layout(); if (user) idleUntil = Date.now() + 6000; }
     const next = () => go(cur + 1), prev = () => go(cur - 1);
     function tick() { if (visible && Date.now() > idleUntil && !document.hidden) next(); }
-    timer = setInterval(tick, 3200);
+    timer = setInterval(tick, 4000);
     new IntersectionObserver((e) => { visible = e[0].isIntersecting; }, { threshold: .3 }).observe(root);
     // swipe / drag
     let x0 = null;

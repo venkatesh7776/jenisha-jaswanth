@@ -48,6 +48,8 @@ window.WEDDING = {
   gallery: [
     "assets/img/gallery/g01.webp",
     "assets/img/gallery/g02.webp",
+    "assets/img/gallery/g03.webp",
+    "assets/img/gallery/g04.webp",
   ],
 
   endNote: "Your presence and blessings would mean the world to us as we begin this beautiful journey together.",
