@@ -242,7 +242,7 @@
       cv.width = r.width * dpr; cv.height = r.height * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       const w = r.width, h = r.height;
       const g = ctx.createLinearGradient(0, 0, w, h);
-      g.addColorStop(0, "#9A7B45"); g.addColorStop(.3, "#D4B983"); g.addColorStop(.48, "#F6ECD3"); g.addColorStop(.62, "#C9A96E"); g.addColorStop(1, "#86693A");
+      g.addColorStop(0, "#A07E3C"); g.addColorStop(.3, "#D8B872"); g.addColorStop(.48, "#F8EACA"); g.addColorStop(.62, "#C8A45D"); g.addColorStop(1, "#8C6C30");
       ctx.globalCompositeOperation = "source-over";
       ctx.fillStyle = g; ctx.beginPath(); ctx.arc(w / 2, h / 2, w / 2, 0, Math.PI * 2); ctx.fill();
       // foil grain + brushed lines

@@ -324,6 +324,55 @@
       "ar": "4:3",
       "cutout": false,
       "prompt": "A refined watercolor-and-ink illustration of an elegant wedding reception: round tables with ivory linens, tall centrepieces of white roses and eucalyptus, candles, crystal chandeliers glowing warm champagne-gold, soft draped fabric. Palette of ivory, white, sage green and champagne gold with fine gold-ink linework, absolutely no purple. The painting is a loose vignette that fades softly into a pure white #FFFFFF background at all edges. No text, no people, no border."
+    },
+    {
+      "name": "n_paper",
+      "ref": "none",
+      "ar": "1:1",
+      "cutout": false,
+      "prompt": "A seamless, tileable background texture of deep midnight-navy linen card stock (#16203A base) with a very subtle fine woven linen grain and an extremely faint tone-on-tone botanical watermark of leaves and roses in a slightly lighter navy (#1C2742). Perfectly flat, even lighting, no vignette, no hotspots, repeats edge-to-edge without seams. Only navy tones, no gold, no text, no objects."
+    },
+    {
+      "name": "n_top_l",
+      "ref": "none",
+      "ar": "16:9",
+      "cutout": true,
+      "prompt": "Botanical style: realistic, highly detailed premium stationery illustration (NOT loose watercolor) of lush white and ivory garden roses, white peonies and a white magnolia, silver-green eucalyptus, and several leaves rendered in shimmering metallic ANTIQUE-GOLD foil (#C8A45D) mixed among the greenery; soft natural shading and depth. Palette strictly white, ivory, silver-green and antique gold — absolutely no purple, pink or blue flowers, no religious symbols. A lush, graceful floral cluster designed to hang from the TOP-LEFT of a web page: white roses, one peony, one magnolia, buds, eucalyptus and gold-foil leaves on arching stems, arranged in a sweeping crescent — dense on the left, trailing elegantly to the right and slightly downward. Every flower, bud and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid dark charcoal background #2B2B2B (single colour, no gradient, no texture, no shadow), no text, no border."
+    },
+    {
+      "name": "n_top_r",
+      "ref": "none",
+      "ar": "16:9",
+      "cutout": true,
+      "prompt": "Botanical style: realistic, highly detailed premium stationery illustration (NOT loose watercolor) of lush white and ivory garden roses, white peonies and a white magnolia, silver-green eucalyptus, and several leaves rendered in shimmering metallic ANTIQUE-GOLD foil (#C8A45D) mixed among the greenery; soft natural shading and depth. Palette strictly white, ivory, silver-green and antique gold — absolutely no purple, pink or blue flowers, no religious symbols. A lush, graceful floral cluster designed to hang from the TOP-RIGHT of a web page: white roses, one peony, one magnolia, buds, eucalyptus and gold-foil leaves on arching stems, arranged in a sweeping crescent — dense on the right, trailing elegantly to the left and slightly downward. Every flower, bud and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid dark charcoal background #2B2B2B (single colour, no gradient, no texture, no shadow), no text, no border."
+    },
+    {
+      "name": "n_bot_l",
+      "ref": "none",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "Botanical style: realistic, highly detailed premium stationery illustration (NOT loose watercolor) of lush white and ivory garden roses, white peonies and a white magnolia, silver-green eucalyptus, and several leaves rendered in shimmering metallic ANTIQUE-GOLD foil (#C8A45D) mixed among the greenery; soft natural shading and depth. Palette strictly white, ivory, silver-green and antique gold — absolutely no purple, pink or blue flowers, no religious symbols. An elegant floral arrangement for the BOTTOM-LEFT corner of a web page: 3 white roses, a peony, buds, tall eucalyptus stems and gold-foil leaves rising upward and leaning right, dense at the bottom-left. Every flower, bud and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid dark charcoal background #2B2B2B (single colour, no gradient, no texture, no shadow), no text, no border."
+    },
+    {
+      "name": "n_corner",
+      "ref": "none",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "Botanical style: realistic, highly detailed premium stationery illustration (NOT loose watercolor) of lush white and ivory garden roses, white peonies and a white magnolia, silver-green eucalyptus, and several leaves rendered in shimmering metallic ANTIQUE-GOLD foil (#C8A45D) mixed among the greenery; soft natural shading and depth. Palette strictly white, ivory, silver-green and antique gold — absolutely no purple, pink or blue flowers, no religious symbols. A compact L-shaped corner floral cluster for the TOP-LEFT corner of a card: white roses and a peony densest exactly in the corner, eucalyptus and gold-foil leaves extending right along the top and down the left side, tapering at both ends. Every flower, bud and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid dark charcoal background #2B2B2B (single colour, no gradient, no texture, no shadow), no text, no border."
+    },
+    {
+      "name": "n_card",
+      "ref": "diecut",
+      "ar": "16:9",
+      "cutout": true,
+      "prompt": "The first reference photo shows a luxury die-cut wedding invitation card (held in the hand on the left). Recreate the SAME card construction — an ivory panel with rounded ends, a die-cut backing layer peeking out behind it, flowers clustered around the panel edges, a satin ribbon bow at the top — but RE-THEMED for a midnight-navy and gold wedding: the backing layer is deep midnight navy (#1F2A44) with a thin antique-gold foil edge, the flowers are realistic white roses, peonies and magnolias with silver-green eucalyptus and metallic antique-gold foil leaves, the bow is antique-gold satin, the panel is warm ivory (#F7F2E7) with a very faint tone-on-tone pattern. As a WIDE HORIZONTAL landscape card (as if rotated 90 degrees): flowers densest at the left end and bottom-left, more at the top-right and bottom-right corners, bow at the top centre. The ivory centre panel must be COMPLETELY EMPTY — no text, no letters. No purple, no pink. Shown flat, straight-on, no hand, the whole card fully inside the frame, isolated on a pure solid flat white #FFFFFF background, soft subtle shadow only under the card."
+    },
+    {
+      "name": "n_card_m",
+      "ref": "diecut",
+      "ar": "9:16",
+      "cutout": true,
+      "prompt": "The first reference photo shows a luxury die-cut wedding invitation card (held in the hand on the left). Recreate the SAME card construction — an ivory panel with rounded ends, a die-cut backing layer peeking out behind it, flowers clustered around the panel edges, a satin ribbon bow at the top — but RE-THEMED for a midnight-navy and gold wedding: the backing layer is deep midnight navy (#1F2A44) with a thin antique-gold foil edge, the flowers are realistic white roses, peonies and magnolias with silver-green eucalyptus and metallic antique-gold foil leaves, the bow is antique-gold satin, the panel is warm ivory (#F7F2E7) with a very faint tone-on-tone pattern. As a TALL PORTRAIT card with a wide ivory panel (at least 70% of the card width): flowers densest along the left side and bottom-left, more at the top-right and bottom-right, bow at the top centre. The ivory centre panel must be COMPLETELY EMPTY — no text, no letters. No purple, no pink. Shown flat, straight-on, no hand, the whole card fully inside the frame, isolated on a pure solid flat white #FFFFFF background, soft subtle shadow only under the card."
     }
   ]
 }

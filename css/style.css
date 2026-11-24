@@ -1,6 +1,6 @@
 /* =====================================================================
-   Jenisha & Jaswanth — palette taken from the physical card:
-   butter-cream patterned paper, lilac die-cut layers, bronze ink, gold foil.
+   Jenisha & Jaswanth — demo-3 "Midnight Navy & Gold".
+   Navy linen page, ivory card panels, antique-gold foil, ivory/gold text on navy.
    ===================================================================== */
 :root {
   --paper: #FAF7F0;       /* ivory */
@@ -301,9 +301,9 @@ p { margin: 0; }
    10. CLOSING — the physical die-cut card, turned sideways
    ===================================================================== */
 .closing { padding-bottom: 2.5rem; display: grid; justify-items: center; gap: 1.5rem; overflow: hidden; }
-.closing-card { position: relative; width: min(1120px, 96vw); aspect-ratio: 1767 / 936; }
+.closing-card { position: relative; width: min(1120px, 96vw); aspect-ratio: 1907 / 1040; }
 .cc-art { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; filter: drop-shadow(0 26px 40px rgba(63,74,58,.22)); }
-.cc-content { position: absolute; left: 22%; right: 20%; top: 25%; bottom: 23%; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 4%; }
+.cc-content { position: absolute; left: 26%; right: 23%; top: 22%; bottom: 21%; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 4%; }
 .cc-photo { margin: 0; height: 100%; aspect-ratio: 4 / 5; border-radius: 999px 999px 12px 12px; overflow: hidden; position: relative;
   box-shadow: 0 0 0 1px rgba(179,146,88,.7), 0 0 0 6px var(--lilac), 0 16px 30px -16px rgba(63,74,58,.5); }
 .cc-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 70%; }
@@ -332,8 +332,8 @@ p { margin: 0; }
   .cv-flower.tr { top: -11vw; }
   .hero-fl.top-l { top: -10.5vw; }
   .hero-fl.top-r { top: -12vw; }
-  .closing-card { width: 122vw; aspect-ratio: 1074 / 1821; justify-self: start; margin-left: calc(50% - 61vw); }
-  .cc-content { left: 25%; right: 20%; top: 19%; bottom: 13%; grid-template-columns: 1fr; grid-template-rows: auto 1fr; align-items: start; gap: 1rem; }
+  .closing-card { width: 122vw; aspect-ratio: 1027 / 1801; justify-self: start; margin-left: calc(50% - 61vw); }
+  .cc-content { left: 24%; right: 22%; top: 15%; bottom: 12%; grid-template-columns: 1fr; grid-template-rows: auto 1fr; align-items: start; gap: 1rem; }
   .cc-photo { height: auto; width: 82%; justify-self: center; }
   .end-note { font-size: .98rem; }
   .sign { font-size: 2rem; }
@@ -374,4 +374,60 @@ p { margin: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* =====================================================================
+   THEME — Midnight Navy & Gold (demo-3)
+   Page level = navy background with ivory/gold text.
+   Inside ivory panels (.light) the ink variables switch back to dark navy.
+   ===================================================================== */
+:root {
+  --paper: #16203A;  --paper-2: #1F2A44;  --face: #F7F2E7;
+  --lilac: #2C3A5E;  --lilac-2: #8FA3B8;  --line: #D9CDB4;
+  --plum: #F4EAD5;   /* headings & names on navy: warm ivory */
+  --bronze: #E2C98F; /* accents on navy: light gold */
+  --ink: #E6E0D2;  --muted: #B9A77E;
+  --gold-1: #C8A45D;  --gold-2: #E8D3A0;
+  --gold: linear-gradient(115deg, #A07E3C 0%, #D8B872 32%, #F6E6BF 46%, #C8A45D 62%, #8C6C30 100%);
+  --navy: #1F2A44;  --navy-ink: #1C2640;
+}
+.pc-face, .face, .medal, .cd-arch, .closing-card, .music-btn, .ev-card .pc-face {
+  --plum: #1F2A44; --bronze: #2E3B5E; --ink: #3A4560; --muted: #7D7A6E; --line: #DED3BC; --lilac: #EADFC4;
+  color: var(--ink);
+}
+@keyframes glow { 0% { box-shadow: 0 0 0 1px rgba(200,164,93,.95), 0 0 0 6px #E8D3A0, 0 0 26px 4px rgba(232,211,160,.6); } 100% { box-shadow: 0 0 0 1px rgba(200,164,93,.6), 0 0 0 6px var(--lilac), 0 18px 34px -16px rgba(0,0,0,.35); } }
+body { background: var(--paper) url("../assets/img/paper_navy.webp") center / 640px repeat; }
+#cover { background: radial-gradient(80% 55% at 50% 22%, rgba(200,164,93,.12), transparent 75%), var(--paper) url("../assets/img/paper_navy.webp") center / 640px repeat; }
+.hero { background: radial-gradient(55% 50% at 50% 50%, rgba(200,164,93,.10), transparent 80%); }
+.events-sec { background: linear-gradient(180deg, rgba(143,163,184,0), rgba(143,163,184,.10) 18%, rgba(143,163,184,.10) 82%, rgba(143,163,184,0)); }
+
+/* gold buttons with navy text on the page; navy buttons inside ivory panels */
+.solid-btn, .open-btn { background: var(--gold); background-size: 200% 100%; color: var(--navy-ink); box-shadow: 0 12px 28px -12px rgba(200,164,93,.6); }
+.solid-btn:hover, .open-btn:hover { background-position: 100% 0; }
+.ghost-btn { color: var(--plum); background: transparent; border-color: var(--gold-1); }
+.ghost-btn:hover { background: var(--gold-1); color: var(--navy-ink); border-color: var(--gold-1); }
+.pc-face .solid-btn, .face .solid-btn { background: var(--navy); color: var(--face); box-shadow: 0 10px 24px -12px rgba(15,22,40,.7); }
+.choice input:checked + span { background: var(--navy); color: var(--face); border-color: var(--navy); }
+
+/* the green JJ logo sits on a small ivory medallion so it stays crisp on navy */
+.hero-logo { background: radial-gradient(circle at 50% 40%, #FFFDF7, var(--face)); border-radius: 50%; padding: 14px;
+  box-shadow: 0 0 0 1px rgba(200,164,93,.8), 0 0 0 6px rgba(200,164,93,.12), 0 12px 30px -10px rgba(0,0,0,.5); }
+
+/* cards, frames and medals: navy die-cut layer + gold edge */
+.pc-back { box-shadow: 0 30px 60px -30px rgba(0,0,0,.6), inset 0 0 0 1px rgba(200,164,93,.55); }
+.story-photo::before { box-shadow: 0 30px 60px -28px rgba(0,0,0,.6), inset 0 0 0 1px rgba(200,164,93,.6); }
+.medal { box-shadow: 0 18px 40px -16px rgba(0,0,0,.55), 0 0 0 6px var(--lilac), 0 0 0 7px rgba(200,164,93,.5); }
+.cd-arch { box-shadow: 0 0 0 1px rgba(200,164,93,.6), 0 0 0 6px var(--lilac), 0 18px 34px -16px rgba(0,0,0,.28); }
+.cc-art, .hero-fl img, .cv-flower, .pc-flower, .story-sprig, .rsvp-flower, .sd-sprig { filter: drop-shadow(0 10px 16px rgba(0,0,0,.45)); }
+.cc-photo { box-shadow: 0 0 0 1px rgba(200,164,93,.8), 0 0 0 6px var(--lilac), 0 16px 30px -16px rgba(0,0,0,.55); }
+.divider span { background: linear-gradient(90deg, transparent, var(--gold-1)); }
+.divider span:last-child { background: linear-gradient(90deg, var(--gold-1), transparent); }
+.scroll-cue, .foot { color: var(--muted); }
+.cover-photo { filter: drop-shadow(0 -10px 30px rgba(0,0,0,.25)); }
+@media (min-width: 721px) {
+  .cc-text { gap: .35rem; }
+  .cc-text .q-mark { font-size: 3rem; height: .35em; }
+  .end-note { font-size: clamp(.92rem, 1.25vw, 1.12rem); }
+  .sign { font-size: clamp(1.7rem, 2.6vw, 2.4rem); }
+  .closing-logo { width: 42px; }
 }
