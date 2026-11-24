@@ -326,53 +326,95 @@
       "prompt": "A refined watercolor-and-ink illustration of an elegant wedding reception: round tables with ivory linens, tall centrepieces of white roses and eucalyptus, candles, crystal chandeliers glowing warm champagne-gold, soft draped fabric. Palette of ivory, white, sage green and champagne gold with fine gold-ink linework, absolutely no purple. The painting is a loose vignette that fades softly into a pure white #FFFFFF background at all edges. No text, no people, no border."
     },
     {
-      "name": "n_paper",
-      "ref": "none",
+      "name": "m_paper",
+      "ref": "maroon",
       "ar": "1:1",
       "cutout": false,
-      "prompt": "A seamless, tileable background texture of deep midnight-navy linen card stock (#16203A base) with a very subtle fine woven linen grain and an extremely faint tone-on-tone botanical watermark of leaves and roses in a slightly lighter navy (#1C2742). Perfectly flat, even lighting, no vignette, no hotspots, repeats edge-to-edge without seams. Only navy tones, no gold, no text, no objects."
+      "prompt": "A seamless, tileable background texture of warm beige parchment / cotton card stock exactly like the background of the reference image (#F5EDE0 base), with soft natural paper fibres and grain and an extremely faint tone-on-tone pattern of scattered leaves and small blossoms in a slightly deeper beige (#ECE1CF). Perfectly flat, even lighting, no vignette, no hotspots, repeats edge-to-edge without seams. NO buildings, no architecture, no text, no objects — only beige paper."
     },
     {
-      "name": "n_top_l",
-      "ref": "none",
+      "name": "m_top_l",
+      "ref": "maroon",
       "ar": "16:9",
       "cutout": true,
-      "prompt": "Botanical style: realistic, highly detailed premium stationery illustration (NOT loose watercolor) of lush white and ivory garden roses, white peonies and a white magnolia, silver-green eucalyptus, and several leaves rendered in shimmering metallic ANTIQUE-GOLD foil (#C8A45D) mixed among the greenery; soft natural shading and depth. Palette strictly white, ivory, silver-green and antique gold — absolutely no purple, pink or blue flowers, no religious symbols. A lush, graceful floral cluster designed to hang from the TOP-LEFT of a web page: white roses, one peony, one magnolia, buds, eucalyptus and gold-foil leaves on arching stems, arranged in a sweeping crescent — dense on the left, trailing elegantly to the right and slightly downward. Every flower, bud and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid dark charcoal background #2B2B2B (single colour, no gradient, no texture, no shadow), no text, no border."
+      "prompt": "Match the flower artwork of the attached reference (the bouquet beside the burgundy envelope): realistic, highly detailed premium stationery illustration of deep burgundy / wine peonies and garden roses (#4C0913, #6E1F2D), cream and ivory peonies (#EAD9C2), small white anemones with dark centres, slender sprigs of dark burgundy berries, and muted khaki-sage / champagne-beige leaves (#B19A7B) with thin antique-gold (#BE8A4D) edges; soft natural shading and depth, NOT loose watercolor. Use the reference ONLY for flower style and colours — do not copy the envelope, photo, wax seal, paper or any building. No purple, no blue, no religious symbols. A lush, graceful floral cluster designed to hang from the TOP-LEFT of a web page: 2 burgundy peonies, 2 cream peonies, white anemones, buds, berry sprigs and khaki leaves on arching stems, arranged in a sweeping crescent — dense on the left, trailing elegantly to the right and slightly downward. Every flower, bud, berry and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid mid-grey background #7A7A7A (single colour, no gradient, no texture, no shadow), no text, no border."
     },
     {
-      "name": "n_top_r",
-      "ref": "none",
+      "name": "m_top_r",
+      "ref": "maroon",
       "ar": "16:9",
       "cutout": true,
-      "prompt": "Botanical style: realistic, highly detailed premium stationery illustration (NOT loose watercolor) of lush white and ivory garden roses, white peonies and a white magnolia, silver-green eucalyptus, and several leaves rendered in shimmering metallic ANTIQUE-GOLD foil (#C8A45D) mixed among the greenery; soft natural shading and depth. Palette strictly white, ivory, silver-green and antique gold — absolutely no purple, pink or blue flowers, no religious symbols. A lush, graceful floral cluster designed to hang from the TOP-RIGHT of a web page: white roses, one peony, one magnolia, buds, eucalyptus and gold-foil leaves on arching stems, arranged in a sweeping crescent — dense on the right, trailing elegantly to the left and slightly downward. Every flower, bud and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid dark charcoal background #2B2B2B (single colour, no gradient, no texture, no shadow), no text, no border."
+      "prompt": "Match the flower artwork of the attached reference (the bouquet beside the burgundy envelope): realistic, highly detailed premium stationery illustration of deep burgundy / wine peonies and garden roses (#4C0913, #6E1F2D), cream and ivory peonies (#EAD9C2), small white anemones with dark centres, slender sprigs of dark burgundy berries, and muted khaki-sage / champagne-beige leaves (#B19A7B) with thin antique-gold (#BE8A4D) edges; soft natural shading and depth, NOT loose watercolor. Use the reference ONLY for flower style and colours — do not copy the envelope, photo, wax seal, paper or any building. No purple, no blue, no religious symbols. A lush, graceful floral cluster designed to hang from the TOP-RIGHT of a web page: 2 burgundy peonies, 2 cream peonies, white anemones, buds, berry sprigs and khaki leaves on arching stems, arranged in a sweeping crescent — dense on the right, trailing elegantly to the left and slightly downward. Every flower, bud, berry and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid mid-grey background #7A7A7A (single colour, no gradient, no texture, no shadow), no text, no border."
     },
     {
-      "name": "n_bot_l",
+      "name": "m_bot_l",
+      "ref": "maroon",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "Match the flower artwork of the attached reference (the bouquet beside the burgundy envelope): realistic, highly detailed premium stationery illustration of deep burgundy / wine peonies and garden roses (#4C0913, #6E1F2D), cream and ivory peonies (#EAD9C2), small white anemones with dark centres, slender sprigs of dark burgundy berries, and muted khaki-sage / champagne-beige leaves (#B19A7B) with thin antique-gold (#BE8A4D) edges; soft natural shading and depth, NOT loose watercolor. Use the reference ONLY for flower style and colours — do not copy the envelope, photo, wax seal, paper or any building. No purple, no blue, no religious symbols. An elegant floral arrangement for the BOTTOM-LEFT corner of a web page: a burgundy peony, a cream peony, white anemones, tall berry sprigs and khaki leaves rising upward and leaning right, dense at the bottom-left. Every flower, bud, berry and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid mid-grey background #7A7A7A (single colour, no gradient, no texture, no shadow), no text, no border."
+    },
+    {
+      "name": "m_corner",
+      "ref": "maroon",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "Match the flower artwork of the attached reference (the bouquet beside the burgundy envelope): realistic, highly detailed premium stationery illustration of deep burgundy / wine peonies and garden roses (#4C0913, #6E1F2D), cream and ivory peonies (#EAD9C2), small white anemones with dark centres, slender sprigs of dark burgundy berries, and muted khaki-sage / champagne-beige leaves (#B19A7B) with thin antique-gold (#BE8A4D) edges; soft natural shading and depth, NOT loose watercolor. Use the reference ONLY for flower style and colours — do not copy the envelope, photo, wax seal, paper or any building. No purple, no blue, no religious symbols. A compact L-shaped corner floral cluster for the TOP-LEFT corner of a card: a burgundy peony and a cream peony densest exactly in the corner, white anemones, berry sprigs and khaki leaves extending right along the top and down the left side, tapering at both ends. Every flower, bud, berry and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid mid-grey background #7A7A7A (single colour, no gradient, no texture, no shadow), no text, no border."
+    },
+    {
+      "name": "m_sprig_tl",
+      "ref": "maroon",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "Match the flower artwork of the attached reference (the bouquet beside the burgundy envelope): realistic, highly detailed premium stationery illustration of deep burgundy / wine peonies and garden roses (#4C0913, #6E1F2D), cream and ivory peonies (#EAD9C2), small white anemones with dark centres, slender sprigs of dark burgundy berries, and muted khaki-sage / champagne-beige leaves (#B19A7B) with thin antique-gold (#BE8A4D) edges; soft natural shading and depth, NOT loose watercolor. Use the reference ONLY for flower style and colours — do not copy the envelope, photo, wax seal, paper or any building. No purple, no blue, no religious symbols. A light, airy, minimal sprig for the TOP-LEFT corner of a page: one burgundy peony, one small white anemone, a berry sprig and a few khaki leaves on slender stems, trailing gently toward the centre. Lots of negative space. Every flower, bud, berry and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid mid-grey background #7A7A7A (single colour, no gradient, no texture, no shadow), no text, no border."
+    },
+    {
+      "name": "m_sprig_br",
       "ref": "none",
       "ar": "1:1",
       "cutout": true,
-      "prompt": "Botanical style: realistic, highly detailed premium stationery illustration (NOT loose watercolor) of lush white and ivory garden roses, white peonies and a white magnolia, silver-green eucalyptus, and several leaves rendered in shimmering metallic ANTIQUE-GOLD foil (#C8A45D) mixed among the greenery; soft natural shading and depth. Palette strictly white, ivory, silver-green and antique gold — absolutely no purple, pink or blue flowers, no religious symbols. An elegant floral arrangement for the BOTTOM-LEFT corner of a web page: 3 white roses, a peony, buds, tall eucalyptus stems and gold-foil leaves rising upward and leaning right, dense at the bottom-left. Every flower, bud and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid dark charcoal background #2B2B2B (single colour, no gradient, no texture, no shadow), no text, no border."
+      "prompt": "realistic, highly detailed premium stationery illustration of deep burgundy / wine peonies and garden roses (#4C0913, #6E1F2D), cream and ivory peonies (#EAD9C2), small white anemones with dark centres, slender sprigs of dark burgundy berries, and muted khaki-sage / champagne-beige leaves (#B19A7B) with thin antique-gold (#BE8A4D) edges; soft natural shading and depth, NOT loose watercolor. No purple, no blue, no religious symbols. A light, airy, minimal sprig for the BOTTOM-RIGHT corner of a page: one cream peony, one burgundy rose bud, a berry sprig and a few khaki leaves on slender stems, reaching gently up and to the left. Lots of negative space. Every flower, bud, berry and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid mid-grey background #7A7A7A (single colour, no gradient, no texture, no shadow), no text, no border."
     },
     {
-      "name": "n_corner",
-      "ref": "none",
+      "name": "m_blooms",
+      "ref": "maroon",
       "ar": "1:1",
       "cutout": true,
-      "prompt": "Botanical style: realistic, highly detailed premium stationery illustration (NOT loose watercolor) of lush white and ivory garden roses, white peonies and a white magnolia, silver-green eucalyptus, and several leaves rendered in shimmering metallic ANTIQUE-GOLD foil (#C8A45D) mixed among the greenery; soft natural shading and depth. Palette strictly white, ivory, silver-green and antique gold — absolutely no purple, pink or blue flowers, no religious symbols. A compact L-shaped corner floral cluster for the TOP-LEFT corner of a card: white roses and a peony densest exactly in the corner, eucalyptus and gold-foil leaves extending right along the top and down the left side, tapering at both ends. Every flower, bud and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid dark charcoal background #2B2B2B (single colour, no gradient, no texture, no shadow), no text, no border."
+      "prompt": "Match the flower artwork of the attached reference (the bouquet beside the burgundy envelope): realistic, highly detailed premium stationery illustration of deep burgundy / wine peonies and garden roses (#4C0913, #6E1F2D), cream and ivory peonies (#EAD9C2), small white anemones with dark centres, slender sprigs of dark burgundy berries, and muted khaki-sage / champagne-beige leaves (#B19A7B) with thin antique-gold (#BE8A4D) edges; soft natural shading and depth, NOT loose watercolor. Use the reference ONLY for flower style and colours — do not copy the envelope, photo, wax seal, paper or any building. No purple, no blue, no religious symbols. A sprite sheet of 9 separate single elements in a clean 3x3 grid with wide spacing, none touching each other or the edges: 3 single burgundy peonies (top / three-quarter view), 3 single cream peonies, 3 small white anemones. Same scale. Every flower, bud, berry and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid mid-grey background #7A7A7A (single colour, no gradient, no texture, no shadow), no text, no border."
     },
     {
-      "name": "n_card",
-      "ref": "diecut",
+      "name": "m_petals",
+      "ref": "maroon",
+      "ar": "1:1",
+      "cutout": true,
+      "prompt": "A sprite sheet of 16 separate tiny elements in a clean 4x4 grid with wide spacing, none touching each other or the edges: 7 single loose deep burgundy / wine peony petals, 6 single loose cream-ivory peony petals (slightly curled, soft realistic shading) and 3 small khaki-sage leaves. Realistic, detailed, soft natural light. Every flower, bud, berry and leaf must be COMPLETE and fully inside the frame with a margin — nothing cropped by the image edges. Isolated on a perfectly flat, uniform solid mid-grey background #7A7A7A (single colour, no gradient, no texture, no shadow), no text, no border."
+    },
+    {
+      "name": "m_card",
+      "ref": "maroon",
       "ar": "16:9",
       "cutout": true,
-      "prompt": "The first reference photo shows a luxury die-cut wedding invitation card (held in the hand on the left). Recreate the SAME card construction — an ivory panel with rounded ends, a die-cut backing layer peeking out behind it, flowers clustered around the panel edges, a satin ribbon bow at the top — but RE-THEMED for a midnight-navy and gold wedding: the backing layer is deep midnight navy (#1F2A44) with a thin antique-gold foil edge, the flowers are realistic white roses, peonies and magnolias with silver-green eucalyptus and metallic antique-gold foil leaves, the bow is antique-gold satin, the panel is warm ivory (#F7F2E7) with a very faint tone-on-tone pattern. As a WIDE HORIZONTAL landscape card (as if rotated 90 degrees): flowers densest at the left end and bottom-left, more at the top-right and bottom-right corners, bow at the top centre. The ivory centre panel must be COMPLETELY EMPTY — no text, no letters. No purple, no pink. Shown flat, straight-on, no hand, the whole card fully inside the frame, isolated on a pure solid flat white #FFFFFF background, soft subtle shadow only under the card."
+      "prompt": "The first reference photo shows the colour palette and flowers to use (burgundy envelope, gold wax seal, burgundy & cream peonies, khaki leaves). Design a luxury die-cut wedding invitation card: an ivory panel (#FBF6EC, faint tone-on-tone pattern) with rounded ends, a deep burgundy (#5E1A24) die-cut backing layer peeking out behind it with a thin antique-gold foil edge, realistic burgundy and cream peonies, white anemones, burgundy berry sprigs and khaki-sage leaves with gold edges clustered around the panel edges, and a round antique-gold (#BE8A4D) WAX SEAL embossed with a simple heart at the top centre. As a WIDE HORIZONTAL landscape card: flowers densest at the left end and bottom-left, more at the top-right and bottom-right corners. The ivory centre panel must be COMPLETELY EMPTY — no text, no letters. No photo, no envelope, no building. Shown flat, straight-on, the whole card fully inside the frame, isolated on a pure solid flat white #FFFFFF background, soft subtle shadow only under the card."
     },
     {
-      "name": "n_card_m",
-      "ref": "diecut",
+      "name": "m_card_m",
+      "ref": "maroon",
       "ar": "9:16",
       "cutout": true,
-      "prompt": "The first reference photo shows a luxury die-cut wedding invitation card (held in the hand on the left). Recreate the SAME card construction — an ivory panel with rounded ends, a die-cut backing layer peeking out behind it, flowers clustered around the panel edges, a satin ribbon bow at the top — but RE-THEMED for a midnight-navy and gold wedding: the backing layer is deep midnight navy (#1F2A44) with a thin antique-gold foil edge, the flowers are realistic white roses, peonies and magnolias with silver-green eucalyptus and metallic antique-gold foil leaves, the bow is antique-gold satin, the panel is warm ivory (#F7F2E7) with a very faint tone-on-tone pattern. As a TALL PORTRAIT card with a wide ivory panel (at least 70% of the card width): flowers densest along the left side and bottom-left, more at the top-right and bottom-right, bow at the top centre. The ivory centre panel must be COMPLETELY EMPTY — no text, no letters. No purple, no pink. Shown flat, straight-on, no hand, the whole card fully inside the frame, isolated on a pure solid flat white #FFFFFF background, soft subtle shadow only under the card."
+      "prompt": "The first reference photo shows the colour palette and flowers to use (burgundy envelope, gold wax seal, burgundy & cream peonies, khaki leaves). Design a luxury die-cut wedding invitation card: an ivory panel (#FBF6EC, faint tone-on-tone pattern) with rounded ends, a deep burgundy (#5E1A24) die-cut backing layer peeking out behind it with a thin antique-gold foil edge, realistic burgundy and cream peonies, white anemones, burgundy berry sprigs and khaki-sage leaves with gold edges clustered around the panel edges, and a round antique-gold (#BE8A4D) WAX SEAL embossed with a simple heart at the top centre. As a TALL PORTRAIT card with a wide ivory panel (at least 70% of the card width): flowers densest along the left side and bottom-left, more at the top-right and bottom-right. The ivory centre panel must be COMPLETELY EMPTY — no text, no letters. No photo, no envelope, no building. Shown flat, straight-on, the whole card fully inside the frame, isolated on a pure solid flat white #FFFFFF background, soft subtle shadow only under the card."
+    },
+    {
+      "name": "m_venue_wedding",
+      "ref": "none",
+      "ar": "4:3",
+      "cutout": false,
+      "prompt": "A refined watercolor-and-ink illustration of an elegant wedding ceremony setting: a graceful arch of burgundy and cream peonies, white anemones, berry sprigs and khaki-sage greenery, an aisle lined with cream chairs and lanterns, warm soft light. Palette of warm beige, cream, burgundy, wine and antique gold with fine gold-ink linework. Strictly NO religious elements (no church, temple, cross, altar, deity, lotus). A loose vignette that fades softly into a pure white #FFFFFF background at all edges. No text, no people, no border."
+    },
+    {
+      "name": "m_venue_reception",
+      "ref": "none",
+      "ar": "4:3",
+      "cutout": false,
+      "prompt": "A refined watercolor-and-ink illustration of an elegant wedding reception: round tables with cream linens and burgundy napkins, tall centrepieces of burgundy and cream peonies with khaki greenery, candles, crystal chandeliers glowing warm gold, soft draped fabric. Palette of warm beige, cream, burgundy and antique gold with fine gold-ink linework. A loose vignette that fades softly into a pure white #FFFFFF background at all edges. No text, no people, no border."
     }
   ]
 }

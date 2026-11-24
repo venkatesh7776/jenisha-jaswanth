@@ -242,14 +242,14 @@
       cv.width = r.width * dpr; cv.height = r.height * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       const w = r.width, h = r.height;
       const g = ctx.createLinearGradient(0, 0, w, h);
-      g.addColorStop(0, "#A07E3C"); g.addColorStop(.3, "#D8B872"); g.addColorStop(.48, "#F8EACA"); g.addColorStop(.62, "#C8A45D"); g.addColorStop(1, "#8C6C30");
+      g.addColorStop(0, "#9C6B33"); g.addColorStop(.3, "#D6A866"); g.addColorStop(.48, "#F6E2C2"); g.addColorStop(.62, "#BE8A4D"); g.addColorStop(1, "#83562A");
       ctx.globalCompositeOperation = "source-over";
       ctx.fillStyle = g; ctx.beginPath(); ctx.arc(w / 2, h / 2, w / 2, 0, Math.PI * 2); ctx.fill();
       // foil grain + brushed lines
       for (let i = 0; i < 900; i++) { ctx.fillStyle = `rgba(255,255,255,${Math.random() * .18})`; ctx.fillRect(Math.random() * w, Math.random() * h, 1, 1); }
       ctx.strokeStyle = "rgba(255,246,210,.12)"; ctx.lineWidth = 1;
       for (let y = 0; y < h; y += 3) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y + 8); ctx.stroke(); }
-      ctx.fillStyle = "rgba(70,62,40,.75)"; ctx.font = `600 ${Math.max(10, w * .085)}px "Cormorant Garamond", serif`;
+      ctx.fillStyle = "rgba(78,30,20,.75)"; ctx.font = `600 ${Math.max(10, w * .085)}px "Cormorant Garamond", serif`;
       ctx.textAlign = "center"; ctx.textBaseline = "middle";
       ctx.fillText("SCRATCH", w / 2, h / 2 - w * .05); ctx.fillText("HERE", w / 2, h / 2 + w * .07);
     }

@@ -14,6 +14,7 @@ REFS = {"right": [f"{S}/ref_flowers_right.jpg", f"{S}/ref_flowers_tl.jpg"],
         "couple": [f"{S}/ref_couple.jpg", f"{S}/ref_flowers_right.jpg"],
         "flowers": [f"{S}/ref_flowers_right.jpg", f"{S}/ref_flowers_gold.jpg"],
         "none": [],
+        "maroon": [f"{S}/ref_maroon.jpg"],
         "logo": [f"{S}/../raw/logo_page.png"],
         "diecut": [f"{S}/card_ref.jpg", f"{S}/ref_flowers_gold.jpg", f"{S}/ref_flowers_leftcard.jpg"]}
 OUT = f"{ROOT}/assets/raw"
