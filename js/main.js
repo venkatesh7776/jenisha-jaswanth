@@ -40,16 +40,16 @@
   const first = C.events[0], last = C.events[C.events.length - 1];
   const details = C.events.map((e) => `${e.title}: ${e.timeText} — ${e.venue}, ${e.address}`).join("\n");
   $("#gcal").href = "https://calendar.google.com/calendar/render?action=TEMPLATE" +
-    `&text=${encodeURIComponent(`${C.bride.name} & ${C.groom.name} — Wedding`)}&dates=${z(first.start)}/${z(last.end)}` +
+    `&text=${encodeURIComponent(`${C.groom.name} & ${C.bride.name} — Wedding`)}&dates=${z(first.start)}/${z(last.end)}` +
     `&details=${encodeURIComponent(details)}&location=${encodeURIComponent(first.venue + ", " + first.address)}`;
   $("#ics").addEventListener("click", () => {
     const esc = (s) => s.replace(/([,;])/g, "\\$1").replace(/\n/g, "\\n");
     const L = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//jenisha-jaswanth//wedding//EN", "CALSCALE:GREGORIAN"];
     C.events.forEach((e) => L.push("BEGIN:VEVENT", `UID:${e.key}-20270120@jenisha-jaswanth`, `DTSTAMP:${z(Date.now())}`, `DTSTART:${z(e.start)}`, `DTEND:${z(e.end)}`,
-      `SUMMARY:${esc(`${C.bride.name} & ${C.groom.name} — ${e.title}`)}`, `LOCATION:${esc(e.venue + ", " + e.address)}`, "END:VEVENT"));
+      `SUMMARY:${esc(`${C.groom.name} & ${C.bride.name} — ${e.title}`)}`, `LOCATION:${esc(e.venue + ", " + e.address)}`, "END:VEVENT"));
     L.push("END:VCALENDAR");
     const a = document.createElement("a");
-    a.href = URL.createObjectURL(new Blob([L.join("\r\n")], { type: "text/calendar" })); a.download = "Jenisha-Jaswanth-Wedding.ics"; a.click();
+    a.href = URL.createObjectURL(new Blob([L.join("\r\n")], { type: "text/calendar" })); a.download = "Jaswanth-Jenisha-Wedding.ics"; a.click();
   });
 
   /* ---------------- music ---------------- */
@@ -311,7 +311,7 @@
     const photos = C.gallery && C.gallery.length ? C.gallery : [];
     if (!photos.length) { $("#gallery").remove(); return; }
     const slides = []; while (slides.length < Math.max(5, photos.length)) slides.push(...photos);   // enough cards for a full 3D fan
-    slides.forEach((src, i) => { const d = document.createElement("div"); d.className = "cf-card"; d.innerHTML = `<img src="${src}" alt="Jenisha and Jaswanth" loading="lazy" />`; d.addEventListener("click", () => { if (!dragged && i !== cur) go(i, true); }); root.appendChild(d); });
+    slides.forEach((src, i) => { const d = document.createElement("div"); d.className = "cf-card"; d.innerHTML = `<img src="${src}" alt="Jaswanth and Jenisha" loading="lazy" />`; d.addEventListener("click", () => { if (!dragged && i !== cur) go(i, true); }); root.appendChild(d); });
     photos.forEach((_, i) => { const b = document.createElement("button"); b.type = "button"; b.setAttribute("aria-label", `Photo ${i + 1}`); b.addEventListener("click", () => go(closestIndexFor(i), true)); dots.appendChild(b); });
     const cards = $$(".cf-card", root), N = cards.length;
     let cur = 0, timer = null, idleUntil = 0, visible = false, dragged = false;
